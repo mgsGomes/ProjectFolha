@@ -9,6 +9,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectFolha", "ProjectFolh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectFolha.iOS", "ProjectFolha\ProjectFolha.iOS\ProjectFolha.iOS.csproj", "{1047897B-BDA2-4A38-925F-70D318B39279}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{63364B12-9AC6-45C0-8096-E72F5603BED5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{70147DC0-3710-4379-8CBC-DBD871E602F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModel", "ViewModel", "{C899F078-1925-49C8-BFFE-6277581C59FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{1BA97485-8DA7-4F7D-9794-2F35F6A97FB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{26B6810C-05AB-4D21-A99C-2FFB5AD58E40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -108,5 +118,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BA97485-8DA7-4F7D-9794-2F35F6A97FB3} = {63364B12-9AC6-45C0-8096-E72F5603BED5}
+		{26B6810C-05AB-4D21-A99C-2FFB5AD58E40} = {63364B12-9AC6-45C0-8096-E72F5603BED5}
 	EndGlobalSection
 EndGlobal

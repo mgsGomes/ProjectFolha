@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectFolha.Master"
+             Title="Master">
+    <StackLayout Padding="20">
+        <Button x:Name="ButtonA" Text="Página A"/>
+        <Button x:Name="ButtonB" Text="Página B"/>
+    </StackLayout>
+    
+</ContentPage>
