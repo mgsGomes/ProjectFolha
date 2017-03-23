@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectFolha.View.Login.Login"
+             BackgroundColor="#2e8b57">
+    <StackLayout Spacing="20"
+                 Padding="20"
+                 VerticalOptions="Center"
+                 BackgroundColor="#2e8b57">
+        <Image Source="logo"
+               WidthRequest="65"
+               HeightRequest="65"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"/>
+        <Label Text="Project Folha"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="White"
+               StyleClass="Header"/>
+
+        <Entry Placeholder="Username"
+               Text="{Binding Username}"
+               TextColor="White"/>
+        <Entry Placeholder="Password"
+               Text="{Binding Password}"
+               TextColor="White"
+               IsPassword="True"/>
+        <Button x:Name="Btn_Logar"
+                Text="Login" 
+                TextColor="White"
+                BackgroundColor="#77D065"
+                HeightRequest="65"
+                Command="{Binding LoginCommand}"/>
+
+        <!--BackgroundColor="#77D065"-->
+
+    </StackLayout>
+</ContentPage>

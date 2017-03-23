@@ -7,3 +7,6 @@
         <ResourceDictionary MergedWith="light:LightThemeResources" />
     </Application.Resources>
 </Application>
+
+
+<!--xmlns:light="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Light"-->

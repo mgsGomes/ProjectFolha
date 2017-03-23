@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using ProjectFolha.View.Login;
 
 namespace ProjectFolha
 {
@@ -22,7 +23,8 @@ namespace ProjectFolha
             InitializeComponent();
 
             //Página inicial
-            MainPage = new ProjectFolha.MainPage();
+            //MainPage = new ProjectFolha.MainPage();
+            MainPage = new ProjectFolha.View.Login.Login();
         }
 
         protected override void OnStart()
