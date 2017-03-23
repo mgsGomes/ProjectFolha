@@ -61,7 +61,7 @@ namespace ProjectFolha
 
             App.MasterDetail.Detail = new NavigationPage((Page)Activator.CreateInstance(page));
             App.MasterDetail.IsPresented = false;
-
+            
             //Detail = new NavigationPage((Page)Activator.CreateInstance(page));
             //IsPresented = false;
         }
