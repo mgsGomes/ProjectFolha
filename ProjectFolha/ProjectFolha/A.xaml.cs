@@ -15,6 +15,11 @@ namespace ProjectFolha
         public A()
         {
             InitializeComponent();
+
+            Button1.Clicked += async (sender, e) =>
+            {
+                await App.NavigateMasterDetail(new B());
+            };
         }
     }
 }
