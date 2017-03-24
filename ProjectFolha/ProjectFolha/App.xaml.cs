@@ -24,7 +24,7 @@ namespace ProjectFolha
 
             //Página inicial
             //MainPage = new ProjectFolha.MainPage();
-            MainPage = new ProjectFolha.View.Login.Login();
+            MainPage = new Login();
         }
 
         protected override void OnStart()

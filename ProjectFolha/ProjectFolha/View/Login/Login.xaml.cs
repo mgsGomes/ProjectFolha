@@ -16,11 +16,11 @@ namespace ProjectFolha.View.Login
         {
             InitializeComponent();
 
-            //Btn_Logar.Clicked += async (sender, e) =>
-            //{
-            //    await App
-            //};
-          
+            Btn_Logar.Clicked += (sender, e) =>
+            {
+               Application.Current.MainPage = new MainPage();
+            };
+
         }
     }
 }

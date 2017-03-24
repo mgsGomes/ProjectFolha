@@ -28,11 +28,29 @@
                IsPassword="True"/>
         <Button x:Name="Btn_Logar"
                 Text="Login" 
-                TextColor="White"
-                BackgroundColor="#77D065"
+                TextColor="Green"
+                BackgroundColor="White"
+                BorderWidth="1"
+                BorderColor="Green"                
                 HeightRequest="65"
-                Command="{Binding LoginCommand}"/>
+                Command="{Binding LoginCommand}"
+             
+               />
+        <!--
+<Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="White"></Setter>
+            <Setter Property="BorderWidth" Value="1"></Setter>
+            <Setter Property="BorderColor" Value="Green"></Setter>
+            <Setter Property="TextColor" Value="Green"></Setter>
+        </Style>
 
+        <Style x:Key="ContentPageStyle" TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="White"></Setter>
+        </Style>        
+        
+        BackgroundColor="#77D065"
+        
+        -->
         <!--BackgroundColor="#77D065"-->
 
     </StackLayout>
