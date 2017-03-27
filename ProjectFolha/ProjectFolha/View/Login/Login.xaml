@@ -2,41 +2,80 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectFolha.View.Login.Login"
-             BackgroundColor="#2e8b57">
+             BackgroundColor="White" BackgroundImage="fundo2">
+
     <StackLayout Spacing="20"
                  Padding="20"
-                 VerticalOptions="Center"
-                 BackgroundColor="#2e8b57">
+                 VerticalOptions="Center">
         <Image Source="logo"
                WidthRequest="65"
                HeightRequest="65"
                VerticalOptions="Center" 
                HorizontalOptions="Center"/>
+
         <Label Text="Project Folha"
                VerticalOptions="Center"
                HorizontalOptions="Center"
                FontAttributes="Bold"
-               TextColor="White"
+               TextColor="Black"
+               StyleClass="Header"/>
+        
+        <Entry Placeholder="Username"
+               Text="{Binding Username}"
+               TextColor="Black"/>
+        <Entry Placeholder="Password"
+               Text="{Binding Password}"
+               TextColor="Black"
+               IsPassword="True"/>
+        <Button x:Name="Btn_Logar"
+                Text="Login" 
+                TextColor="Black"
+                BackgroundColor="#87CEEB"
+                BorderWidth="1"
+                BorderColor="Black"                
+                HeightRequest="65"
+                FontAttributes="Bold"
+                Command="{Binding LoginCommand}"             
+               />        
+    </StackLayout>
+           
+    <!--<StackLayout Spacing="20"
+                 Padding="20"
+                 VerticalOptions="Center"
+                 BackgroundColor="White"
+                 
+                 >
+        <Image Source="logo"
+               WidthRequest="65"
+               HeightRequest="65"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"/>
+        
+        <Label Text="Project Folha"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="Black"
                StyleClass="Header"/>
 
         <Entry Placeholder="Username"
                Text="{Binding Username}"
-               TextColor="White"/>
+               TextColor="Black"/>
         <Entry Placeholder="Password"
                Text="{Binding Password}"
-               TextColor="White"
+               TextColor="Black"
                IsPassword="True"/>
         <Button x:Name="Btn_Logar"
                 Text="Login" 
-                TextColor="Green"
-                BackgroundColor="White"
+                TextColor="White"
+                BackgroundColor="#00688b"
                 BorderWidth="1"
-                BorderColor="Green"                
+                BorderColor="Black"                
                 HeightRequest="65"
-                Command="{Binding LoginCommand}"
-             
+                FontAttributes="Bold"
+                Command="{Binding LoginCommand}"             
                />
-        <!--
+        --><!--
 <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="BackgroundColor" Value="White"></Setter>
             <Setter Property="BorderWidth" Value="1"></Setter>
@@ -51,7 +90,7 @@
         BackgroundColor="#77D065"
         
         -->
-        <!--BackgroundColor="#77D065"-->
+        <!--BackgroundColor="#77D065"--><!--
 
-    </StackLayout>
+    </StackLayout>-->
 </ContentPage>
