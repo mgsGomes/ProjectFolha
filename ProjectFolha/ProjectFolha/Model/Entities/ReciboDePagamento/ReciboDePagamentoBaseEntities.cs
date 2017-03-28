@@ -22,8 +22,8 @@ namespace ProjectFolha.Model.Entities.ReciboDePagamento
             set { descricaoBase = value; }
         }
 
-        private float valorBase;
-        public float ValorBase
+        private decimal valorBase;
+        public decimal ValorBase
         {
             get { return valorBase; }
             set { valorBase = value; }

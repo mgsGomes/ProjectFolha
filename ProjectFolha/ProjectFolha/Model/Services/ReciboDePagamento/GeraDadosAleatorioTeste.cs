@@ -17,6 +17,8 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
             ObservableCollection<ReciboDePagamentoEntities> reciboDePagamento = new ObservableCollection<ReciboDePagamentoEntities>();
             ReciboDePagamentoList reciboDePagamentoList = new ReciboDePagamentoList();
 
+            decimal lTotal = 0;
+
 
             reciboDePagamento = new ObservableCollection<ReciboDePagamentoEntities>();
 
@@ -28,7 +30,8 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
 
             string[] vdbsDesc = { "Vdb 1", "Vdb 2" , "Vdb 3" , "Vdb 4" , "Vdb 5" , "Vdb 6" , "Vdb 7" , "Vdb 8" };
 
-            float[] vdbsValor = { 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800 };
+            decimal[] vdbsValor = { 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800 };
+            decimal[] vdbsValorDesc = { 11, 12, 13, 14, 15, 16, 17, 18 };
 
             Random rdn = new Random(DateTime.Now.Millisecond);
 
@@ -39,12 +42,11 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
                 ReciboDePagamentoEntities recibo = new ReciboDePagamentoEntities();
                 recibo.Empresa = "Empresa teste";
                 recibo.Unidade = "0001";
-                recibo.Pessoa = 1;
+                recibo.Pessoa = "11111";
                 recibo.Contrato = 1;
                 recibo.DataFolha = new DateTime(2017, 1, i+1);
                 recibo.CodigoFolha = "44";
-                recibo.SalarioContratual = 2456;
-                
+                recibo.SalarioContratual = 2456;                
 
                 for (int j = 0; j < 7; j++)
                 {
@@ -52,25 +54,34 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
                     vencimentos.Vdb = vdbs[rdn.Next(0, 7)];
                     vencimentos.DescricaoVencto = vdbsDesc[rdn.Next(0, 7)];
                     vencimentos.ValorVencto = vdbsValor[rdn.Next(0, 7)];
+                    lTotal += vencimentos.ValorVencto;
                     recibo.Vencimentos.Add(vencimentos);
                 };
+                recibo.TotalVencto = lTotal;
+                lTotal = 0;
+
                 for (int j = 0; j < 7; j++)
                 {
                     ReciboDePagamentoDescEntities descontos = new ReciboDePagamentoDescEntities();
                     descontos.Vdb = vdbs[rdn.Next(0, 7)];
                     descontos.DescricaoDesc = vdbsDesc[rdn.Next(0, 7)];
-                    descontos.ValorDesc = vdbsValor[rdn.Next(0, 7)];
+                    descontos.ValorDesc = vdbsValorDesc[rdn.Next(0, 7)];
+                    lTotal += descontos.ValorDesc;
                     recibo.Descontos.Add(descontos);
                 };
+                recibo.TotalDesc = lTotal;
+                lTotal = 0;
 
                 for (int j = 0; j < 7; j++)
                 {
                     ReciboDePagamentoBaseEntities bases = new ReciboDePagamentoBaseEntities();
                     bases.Vdb = vdbs[rdn.Next(0, 7)];
                     bases.DescricaoBase = vdbsDesc[rdn.Next(0, 7)];
-                    bases.ValorBase = vdbsValor[rdn.Next(0, 7)];
+                    bases.ValorBase = vdbsValor[rdn.Next(0, 7)];                    
                     recibo.Bases.Add(bases);
                 };
+
+                recibo.SalarioLiquido = (recibo.TotalVencto - recibo.TotalDesc);             
 
                 //student.Name = names[rdn.Next(0, 8)];
                 //student.LastName = $"{lastNames[rdn.Next(0, 5)]} {lastNames[rdn.Next(0, 5)]}";

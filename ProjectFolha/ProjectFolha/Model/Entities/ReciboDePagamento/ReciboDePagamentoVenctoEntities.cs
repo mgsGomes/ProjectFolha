@@ -22,8 +22,8 @@ namespace ProjectFolha.Model.Entities.ReciboDePagamento
             set { descricaoVencto = value; }
         }
 
-        private float valorVencto;
-        public float ValorVencto
+        private decimal valorVencto;
+        public decimal ValorVencto
         {
             get { return valorVencto; }
             set { valorVencto = value; }

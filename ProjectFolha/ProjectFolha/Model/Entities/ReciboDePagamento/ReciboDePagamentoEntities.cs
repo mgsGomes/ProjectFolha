@@ -16,8 +16,8 @@ namespace ProjectFolha.Model.Entities.ReciboDePagamento
             set { empresa = value; }
         }
 
-        private int pessoa;
-        public int Pessoa
+        private string pessoa;
+        public string Pessoa
         {
             get { return pessoa; }
             set { pessoa = value; }
@@ -52,15 +52,15 @@ namespace ProjectFolha.Model.Entities.ReciboDePagamento
             set { codigoFolha = value; }
         }
 
-        private float salarioContratual;
-        public float SalarioContratual
+        private decimal salarioContratual;
+        public decimal SalarioContratual
         {
             get { return salarioContratual; }
             set { salarioContratual = value; }
         }
 
-        private float salarioLiquido;
-        public float SalarioLiquido
+        private decimal salarioLiquido;
+        public decimal SalarioLiquido
         {
             get { return salarioLiquido; }
             set { salarioLiquido = value; }
@@ -73,8 +73,8 @@ namespace ProjectFolha.Model.Entities.ReciboDePagamento
             set { vencimentos = value; }
         }
 
-        private float totalVencto;
-        public float TotalVencto
+        private decimal totalVencto;
+        public decimal TotalVencto
         {
             get { return totalVencto; }
             set { totalVencto = value; }
@@ -87,8 +87,8 @@ namespace ProjectFolha.Model.Entities.ReciboDePagamento
             set { descontos = value; }
         }
 
-        private float totalDesc;
-        public float TotalDesc
+        private decimal totalDesc;
+        public decimal TotalDesc
         {
             get { return totalDesc; }
             set { totalDesc = value; }
