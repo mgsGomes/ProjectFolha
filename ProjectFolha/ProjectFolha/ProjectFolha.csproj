@@ -45,6 +45,13 @@
       <DependentUpon>B.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Entities\ObservableBaseObject.cs" />
+    <Compile Include="Model\Entities\ReciboDePagamento\ReciboDePagamentoBaseEntities.cs" />
+    <Compile Include="Model\Entities\ReciboDePagamento\ReciboDePagamentoDescEntities.cs" />
+    <Compile Include="Model\Entities\ReciboDePagamento\ReciboDePagamentoEntities.cs" />
+    <Compile Include="Model\Entities\ReciboDePagamento\ReciboDePagamentoList.cs" />
+    <Compile Include="Model\Entities\ReciboDePagamento\ReciboDePagamentoVenctoEntities.cs" />
+    <Compile Include="Model\Services\ReciboDePagamento\GeraDadosAleatorioTeste.cs" />
+    <Compile Include="ViewModel\ReciboDePagamento\ReciboDePagamentoDirectoryVM.cs" />
     <Compile Include="View\Login\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -59,6 +66,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\MenuItems\MasterPageItem.cs" />
+    <Compile Include="View\ReciboDePagamento\ReciboDePagamentoDetail.xaml.cs">
+      <DependentUpon>ReciboDePagamentoDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReciboDePagamento\ReciboDePagamentoList.xaml.cs">
+      <DependentUpon>ReciboDePagamentoList.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -137,10 +150,23 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModel\" />
+    <Folder Include="View\ComprovanteDeRendimentos\" />
+    <Folder Include="View\FichaDoFuncionario\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\Login\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\ReciboDePagamento\ReciboDePagamentoList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\ReciboDePagamento\ReciboDePagamentoDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

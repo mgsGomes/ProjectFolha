@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjectFolha.View;
 using ProjectFolha.View.MenuItems;
+using ProjectFolha.View.ReciboDePagamento;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -26,7 +27,7 @@ namespace ProjectFolha
             var Page1 = new MasterPageItem() { Title = "Home", Icon = "home", TargetType = typeof(A) };
             var Page2 = new MasterPageItem() { Title = "Ficha do Funcionário", Icon = "ficha", TargetType = typeof(B) };
             var Page3 = new MasterPageItem() { Title = "Comprovante de Rendimento", Icon = "comprovante", TargetType = typeof(B) };
-            var Page4 = new MasterPageItem() { Title = "Recibo de Pagamento", Icon = "recibo",TargetType = typeof(B) };
+            var Page4 = new MasterPageItem() { Title = "Recibo de Pagamento", Icon = "recibo",TargetType = typeof(ReciboDePagamentoLista) };
 
             menuList.Add(Page1);
             menuList.Add(Page2);
