@@ -3,4 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectFolha.View.ReciboDePagamento.ReciboDePagamentoDetail"
              Title="Demonstrativo de Pagamento">
+    <StackLayout>
+        <Label Text="{Binding Empresa}"/>
+        <Label Text="{Binding Unidade}"/>
+        <Label Text="{Binding Pessoa}"/>
+    </StackLayout>
 </ContentPage>

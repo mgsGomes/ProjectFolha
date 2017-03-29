@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjectFolha.Model.Entities.ReciboDePagamento
 {
-    public class ReciboDePagamentoList
+    public class ReciboDePagamentoList: ObservableBaseObject
     {
         private ObservableCollection<ReciboDePagamentoEntities> reciboDePagamentoEntities = new ObservableCollection<ReciboDePagamentoEntities>();
         public ObservableCollection<ReciboDePagamentoEntities> ReciboDePagamentoEntities

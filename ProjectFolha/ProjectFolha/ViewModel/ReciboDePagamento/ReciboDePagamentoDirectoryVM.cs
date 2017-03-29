@@ -1,4 +1,5 @@
-﻿using ProjectFolha.Model.Entities.ReciboDePagamento;
+﻿using ProjectFolha.Model.Entities;
+using ProjectFolha.Model.Entities.ReciboDePagamento;
 using ProjectFolha.Model.Services.ReciboDePagamento;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using Xamarin.Forms;
 
 namespace ProjectFolha.ViewModel.ReciboDePagamento
 {
-    public class ReciboDePagamentoDirectoryVM
+    public class ReciboDePagamentoDirectoryVM: ObservableBaseObject
     {
         public ObservableCollection<ReciboDePagamentoEntities> RecibosDePagamentos { get; set; }
 
@@ -18,14 +19,15 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
         public bool IsBusy
         {
             get { return isBusy; }
-            set { isBusy = value; }
+            set { isBusy = value; OnPropertyChange(); }
         }
 
         public Command CarregaReciboDePagamento
         {
             get;
             set;
-        }
+        }           
+            
 
         public ReciboDePagamentoDirectoryVM()
         {
@@ -43,6 +45,23 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
                 var ReciboCarregado = GeraDadosAleatorioTeste.CarregaReciboTeste();
 
                 foreach(var recibo in ReciboCarregado.ReciboDePagamentoEntities)
+                {
+                    RecibosDePagamentos.Add(recibo);
+                }
+            }
+
+            IsBusy = false;
+        }
+
+        public async void CarregaReciboLista()
+        {
+            if (!IsBusy)
+            {
+                IsBusy = true;
+
+                var ReciboCarregado = GeraDadosAleatorioTeste.CarregaReciboTeste();
+
+                foreach (var recibo in ReciboCarregado.ReciboDePagamentoEntities)
                 {
                     RecibosDePagamentos.Add(recibo);
                 }

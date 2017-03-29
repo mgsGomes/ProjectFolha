@@ -2,10 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectFolha.View.ReciboDePagamento.ReciboDePagamentoLista"
-             Title="Recibos">
+             Title="Recibos" >
 
     <StackLayout Padding="20">
         <Button x:Name="Button1" Text="Proxima"/>
+        <Button Text="Carregar Lista" Command="{Binding CarregaReciboDePagamento}"/>
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
+
+        <ListView x:Name="lvRecibos" ItemsSource="{Binding RecibosDePagamentos}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Contrato}" Detail="{Binding Empresa}" TextColor="Black"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
     </StackLayout>
 
 </ContentPage>

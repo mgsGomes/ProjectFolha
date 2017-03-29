@@ -40,7 +40,8 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
             for (int i = 0; i < 20; i++)
             {
                 ReciboDePagamentoEntities recibo = new ReciboDePagamentoEntities();
-                recibo.Empresa = "Empresa teste";
+                //recibo.Empresa = "Empresa teste";
+                recibo.Empresa = names[rdn.Next(0, 8)];
                 recibo.Unidade = "0001";
                 recibo.Pessoa = "11111";
                 recibo.Contrato = 1;

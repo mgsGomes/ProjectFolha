@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectFolha.Model.Entities.ReciboDePagamento;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,10 @@ namespace ProjectFolha.View.ReciboDePagamento
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ReciboDePagamentoDetail : ContentPage
     {
-        public ReciboDePagamentoDetail()
+        public ReciboDePagamentoDetail(ReciboDePagamentoEntities selectedRecibo)
         {
             InitializeComponent();
+            this.BindingContext = selectedRecibo;
         }
     }
 }
