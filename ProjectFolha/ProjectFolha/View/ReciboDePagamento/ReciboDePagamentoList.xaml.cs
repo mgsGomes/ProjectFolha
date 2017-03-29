@@ -18,8 +18,13 @@ namespace ProjectFolha.View.ReciboDePagamento
         {
             InitializeComponent();            
             this.BindingContext = new ReciboDePagamentoDirectoryVM();
-            
-            lvRecibos.ItemSelected += LvRecibos_ItemSelected;
+            ReciboDePagamentoDirectoryVM teste = new ReciboDePagamentoDirectoryVM();            
+
+
+            lvRecibos.ItemSelected += LvRecibos_ItemSelected;         
+
+            lvRecibos.ItemsSource = teste.RecibosDePagamentos;            
+            teste.CarregaReciboLista();
 
 
             //Button1.Clicked += async (sender, e) =>

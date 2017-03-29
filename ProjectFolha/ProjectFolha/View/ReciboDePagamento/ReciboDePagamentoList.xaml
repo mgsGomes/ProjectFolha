@@ -9,10 +9,10 @@
         <Button Text="Carregar Lista" Command="{Binding CarregaReciboDePagamento}"/>
         <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
 
-        <ListView x:Name="lvRecibos" ItemsSource="{Binding RecibosDePagamentos}">
+        <ListView x:Name="lvRecibos" ItemsSource="{Binding RecibosDePagamentos, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ImageCell Text="{Binding Contrato}" Detail="{Binding Empresa}" TextColor="Black"/>
+                    <ImageCell x:Name="lImgCell" Text="{Binding Contrato}" Detail="{Binding Empresa}" TextColor="Black"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

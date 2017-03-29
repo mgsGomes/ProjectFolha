@@ -68,6 +68,6 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
             }
 
             IsBusy = false;
-        }
+        }        
     }
 }
