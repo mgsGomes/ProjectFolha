@@ -21,10 +21,21 @@ namespace ProjectFolha.View.ReciboDePagamento
             ReciboDePagamentoDirectoryVM teste = new ReciboDePagamentoDirectoryVM();            
 
 
-            lvRecibos.ItemSelected += LvRecibos_ItemSelected;         
+            lvRecibos.ItemSelected += LvRecibos_ItemSelected;                     
 
-            lvRecibos.ItemsSource = teste.RecibosDePagamentos;            
+            foreach(string unidadeContrato in teste.ListaDeContratosDaPessoa().Keys)
+            {
+                Cmb_ListaContratos.Items.Add(unidadeContrato);
+            }
+            Cmb_ListaContratos.SelectedIndex = 0;            
+
+            lvRecibos.ItemsSource = teste.RecibosDePagamentos;
             teste.CarregaReciboLista();
+
+            //foreach(String contrato in teste.)
+            //{
+            //    ComboBox.Items.Add(contrato);
+            //}
 
 
             //Button1.Clicked += async (sender, e) =>

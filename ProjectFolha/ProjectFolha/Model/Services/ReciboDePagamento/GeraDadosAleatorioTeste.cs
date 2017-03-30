@@ -55,7 +55,7 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
                     vencimentos.Vdb = vdbs[rdn.Next(0, 7)];
                     vencimentos.DescricaoVencto = vdbsDesc[rdn.Next(0, 7)];
                     vencimentos.ValorVencto = vdbsValor[rdn.Next(0, 7)];
-                    lTotal += vencimentos.ValorVencto;
+                    lTotal = lTotal + vencimentos.ValorVencto;
                     recibo.Vencimentos.Add(vencimentos);
                 };
                 recibo.TotalVencto = lTotal;
@@ -67,7 +67,7 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
                     descontos.Vdb = vdbs[rdn.Next(0, 7)];
                     descontos.DescricaoDesc = vdbsDesc[rdn.Next(0, 7)];
                     descontos.ValorDesc = vdbsValorDesc[rdn.Next(0, 7)];
-                    lTotal += descontos.ValorDesc;
+                    lTotal = lTotal + descontos.ValorDesc;
                     recibo.Descontos.Add(descontos);
                 };
                 recibo.TotalDesc = lTotal;
@@ -96,6 +96,31 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
             }
             reciboDePagamentoList.ReciboDePagamentoEntities = reciboDePagamento;
             return reciboDePagamentoList;
+        }
+
+        public static ReciboDePagamentoList CarregaListaDeContratosPessoa()
+        {
+            ObservableCollection<ReciboDePagamentoListaDeContratos> listaDeContratos = new ObservableCollection<ReciboDePagamentoListaDeContratos>();
+            ReciboDePagamentoList reciboDePagamentoListaDeContratos = new ReciboDePagamentoList();
+
+            string[] unidades = { "00010", "00020", "00030", "00040", "00050", "00060", "00070", "00080" };
+            int[] contratos = { 10010, 10020, 10030, 10040, 10050, 10060, 10070, 10080 };
+
+            Random rdn = new Random(DateTime.Now.Millisecond);
+            listaDeContratos = new ObservableCollection<ReciboDePagamentoListaDeContratos>();
+
+            for (int i = 0; i < 4; i++)
+            {
+                ReciboDePagamentoListaDeContratos listaRecibo = new ReciboDePagamentoListaDeContratos();
+                listaRecibo.Unidade = unidades[rdn.Next(0, 7)];
+                listaRecibo.Contrato = contratos[rdn.Next(0, 7)];
+                listaRecibo.UnidadeContrato = listaRecibo.Unidade + "/" + listaRecibo.Contrato.ToString();
+                listaDeContratos.Add(listaRecibo);     
+            }
+
+            reciboDePagamentoListaDeContratos.ReciboDePagamentoListaDeContratos = listaDeContratos;
+
+            return reciboDePagamentoListaDeContratos;
         }
     }
 }

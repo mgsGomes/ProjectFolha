@@ -3,9 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectFolha.View.ReciboDePagamento.ReciboDePagamentoDetail"
              Title="Demonstrativo de Pagamento">
-    <StackLayout>
-        <Label Text="{Binding Empresa}"/>
-        <Label Text="{Binding Unidade}"/>
-        <Label Text="{Binding Pessoa}"/>
+    
+    <StackLayout Padding="20" Spacing="20" HorizontalOptions="FillAndExpand">
+        <Label StyleClass="Header"
+               TextColor="Green"
+               HorizontalOptions="Center"
+               Text="{Binding SalarioLiquido, StringFormat='R$ {0:0,0.00}'}"/>
+
+
+        <ListView x:Name="lvDetalheDoRecibo" 
+                  ItemsSource="{Binding Vencimentos, Mode=TwoWay}" 
+                  VerticalOptions="Center"
+                  BackgroundColor="White"
+                  SeparatorVisibility="Default"
+                  SeparatorColor="Black">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell x:Name="lImgCellTeste" 
+                                   Text="{Binding Vdb}"
+                                   Detail="{Binding DescricaoVencto}" 
+                                   TextColor="Black"                      
+                                   />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
+
+
 </ContentPage>

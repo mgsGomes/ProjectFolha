@@ -15,5 +15,12 @@ namespace ProjectFolha.Model.Entities.ReciboDePagamento
             get { return reciboDePagamentoEntities; }
             set { reciboDePagamentoEntities = value; }
         }
+
+        private ObservableCollection<ReciboDePagamentoListaDeContratos> reciboDePagamentoListaDeContratos = new ObservableCollection<ReciboDePagamentoListaDeContratos>();
+        public ObservableCollection<ReciboDePagamentoListaDeContratos> ReciboDePagamentoListaDeContratos
+        {
+            get { return reciboDePagamentoListaDeContratos; }
+            set { reciboDePagamentoListaDeContratos = value; }
+        }
     }
 }

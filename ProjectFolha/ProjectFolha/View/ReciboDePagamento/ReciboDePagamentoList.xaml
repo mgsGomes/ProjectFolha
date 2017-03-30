@@ -4,15 +4,39 @@
              x:Class="ProjectFolha.View.ReciboDePagamento.ReciboDePagamentoLista"
              Title="Recibos" >
 
-    <StackLayout Padding="20">
-        <Button x:Name="Button1" Text="Proxima"/>
-        <Button Text="Carregar Lista" Command="{Binding CarregaReciboDePagamento}"/>
+    <StackLayout Padding="20" Spacing="10" BackgroundColor="#E0E0E0">
+
+        <Label Text="Contrato selecionado:" 
+                   StyleClass="Subheader" 
+                   TextColor="Black"/>
+        <StackLayout Padding="10" BackgroundColor="White">
+            
+            <Picker x:Name="Cmb_ListaContratos" 
+                    Title="Unidade/Contrato" 
+                    HorizontalOptions="FillAndExpand" 
+                    SelectedIndex="{Binding RecibosDePagamentos}"/>
+        </StackLayout>
+
+        <!--<Button Text="Carregar Lista" Command="{Binding CarregaReciboDePagamento}"/>-->
         <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
 
-        <ListView x:Name="lvRecibos" ItemsSource="{Binding RecibosDePagamentos, Mode=TwoWay}">
+        <Label Text="Folhas do contrato selecionado:" 
+                   StyleClass="Subheader" 
+                   TextColor="Black"/>
+        
+        <ListView x:Name="lvRecibos" 
+                  ItemsSource="{Binding RecibosDePagamentos, Mode=TwoWay}" 
+                  VerticalOptions="Center"
+                  BackgroundColor="White"
+                  SeparatorVisibility="Default"
+                  SeparatorColor="Black">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ImageCell x:Name="lImgCell" Text="{Binding Contrato}" Detail="{Binding Empresa}" TextColor="Black"/>
+                    <ImageCell x:Name="lImgCell" 
+                               Text="Folha Mensal"
+                               Detail="{Binding DataFolha, StringFormat='{0:dd/MM/yyyy}'}" 
+                               TextColor="Black"                      
+                               />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

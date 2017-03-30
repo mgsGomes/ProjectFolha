@@ -49,6 +49,7 @@
     <Compile Include="Model\Entities\ReciboDePagamento\ReciboDePagamentoDescEntities.cs" />
     <Compile Include="Model\Entities\ReciboDePagamento\ReciboDePagamentoEntities.cs" />
     <Compile Include="Model\Entities\ReciboDePagamento\ReciboDePagamentoList.cs" />
+    <Compile Include="Model\Entities\ReciboDePagamento\ReciboDePagamentoListaDeContratos.cs" />
     <Compile Include="Model\Entities\ReciboDePagamento\ReciboDePagamentoVenctoEntities.cs" />
     <Compile Include="Model\Services\ReciboDePagamento\GeraDadosAleatorioTeste.cs" />
     <Compile Include="ViewModel\ReciboDePagamento\ReciboDePagamentoDirectoryVM.cs" />

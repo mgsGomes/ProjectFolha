@@ -14,6 +14,7 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
     public class ReciboDePagamentoDirectoryVM: ObservableBaseObject
     {
         public ObservableCollection<ReciboDePagamentoEntities> RecibosDePagamentos { get; set; }
+        //public ObservableCollection<ReciboDePagamentoVenctoEntities> ReciboVencimentos { get; set; }
 
         bool isBusy = false;
         public bool IsBusy
@@ -32,6 +33,7 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
         public ReciboDePagamentoDirectoryVM()
         {
             RecibosDePagamentos = new ObservableCollection<ReciboDePagamentoEntities>();
+           // ReciboVencimentos = new ObservableCollection<ReciboDePagamentoVenctoEntities>();
             IsBusy = false;
             CarregaReciboDePagamento = new Command((obj) => CarregaRecibo());
         }
@@ -48,6 +50,8 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
                 {
                     RecibosDePagamentos.Add(recibo);
                 }
+
+                
             }
 
             IsBusy = false;
@@ -68,6 +72,20 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
             }
 
             IsBusy = false;
-        }        
+        }
+
+        public Dictionary<String, String> ListaDeContratosDaPessoa()
+        {
+            Dictionary<String, String> unidadeContrato = new Dictionary<string, string>();
+
+            var ListaDeContratos = GeraDadosAleatorioTeste.CarregaListaDeContratosPessoa();
+
+            foreach(var listaDeContratosPessoa in ListaDeContratos.ReciboDePagamentoListaDeContratos)
+            {
+                unidadeContrato.Add(listaDeContratosPessoa.UnidadeContrato, listaDeContratosPessoa.UnidadeContrato);
+            }
+
+            return unidadeContrato;
+        }
     }
 }
