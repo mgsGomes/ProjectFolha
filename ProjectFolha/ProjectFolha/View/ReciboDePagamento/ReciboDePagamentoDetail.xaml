@@ -5,10 +5,17 @@
              Title="Demonstrativo de Pagamento">
     
     <StackLayout Padding="20" Spacing="20" HorizontalOptions="FillAndExpand">
-        <Label StyleClass="Header"
-               TextColor="Green"
-               HorizontalOptions="Center"
-               Text="{Binding SalarioLiquido, StringFormat='R$ {0:0,0.00}'}"/>
+        <StackLayout Spacing="2">
+            <Label StyleClass="Header"
+                   TextColor="Green"
+                   HorizontalOptions="Center"
+                   Text="{Binding SalarioLiquido, StringFormat='R$ {0:0,0.00}'}"/>
+            <Label Text="Líquido"
+                   StyleClass="Body"
+                   TextColor="Gray"
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+
 
 
         <ListView x:Name="lvDetalheDoRecibo" 
