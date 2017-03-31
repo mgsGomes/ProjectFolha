@@ -21,7 +21,17 @@
                    HorizontalOptions="Center"/>
             </StackLayout>
 
-            <TableView x:Name="tbTabela">
+            <TabbedPage>
+                <TabbedPage.Children>
+                    <ContentPage Title="Pagina 1">
+                        <StackLayout BackgroundColor="Blue">
+                            
+                        </StackLayout>
+                    </ContentPage>
+                </TabbedPage.Children>
+            </TabbedPage>
+
+            <!--<TableView x:Name="tbTabela">
                 <TableRoot>
                     <TableSection Title="Teste">
                         <ViewCell>
@@ -45,7 +55,7 @@
                         </ViewCell>
                     </TableSection>
                 </TableRoot>
-            </TableView>
+            </TableView>-->
 
             
 

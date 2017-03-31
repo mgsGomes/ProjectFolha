@@ -18,23 +18,27 @@ namespace ProjectFolha.View.ReciboDePagamento
         {
             InitializeComponent();
             this.BindingContext = selectedRecibo;
-            // ReciboDePagamentoDirectoryVM teste = new ReciboDePagamentoDirectoryVM();
+            ReciboDePagamentoDirectoryVM teste = new ReciboDePagamentoDirectoryVM();            
+
 
             //var section = new TableSection("Customers");
 
-            //foreach (var customer in Customers)
-            //{
-            //    System.Diagnostics.Debug.WriteLine((string)customers["ContactName"]);
-            //    // populate Data on TableView
-            //    var name = (string)customer["ContactName"];
-            //    var position = (string)customer["ContactPosition"]
-            
-            //    var cell = new TextCell { Text = name, Detail = position };
-            //    section.Add(cell);
+            //foreach (var customer in teste.RecibosDePagamentos)
+            //{          
+            //    foreach(var vencimentos in customer.Vencimentos)
+            //    {
+            //        // populate Data on TableView
+            //        var name = vencimentos.Vdb;
+            //        var position = vencimentos.DescricaoVencto;
+
+            //        var cell = new TextCell { Text = name, Detail = position };
+            //        section.Add(cell);
+            //    }             
+                
             //}
 
             //// add the section to the TableView root
-            //tableView.Root.Add(section);
+            //tbTabela.Root.Add(section);
 
             //// var table = new TableView();
             //tbTabela.Intent = TableIntent.Settings;
