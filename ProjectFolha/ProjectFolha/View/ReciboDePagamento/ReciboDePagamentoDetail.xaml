@@ -3,38 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectFolha.View.ReciboDePagamento.ReciboDePagamentoDetail"
              Title="Demonstrativo de Pagamento">
-    
-    <StackLayout Padding="20" Spacing="20" HorizontalOptions="FillAndExpand">
-        <StackLayout Spacing="2">
-            <Label StyleClass="Header"
+
+    <ScrollView>
+    <StackLayout Padding="20" 
+                 Spacing="20" 
+                 HorizontalOptions="FillAndExpand"
+                 BackgroundColor="#E0E0E0">
+
+            <StackLayout Spacing="2">
+                <Label StyleClass="Header"
                    TextColor="Green"
                    HorizontalOptions="Center"
-                   Text="{Binding SalarioLiquido, StringFormat='R$ {0:0,0.00}'}"/>
-            <Label Text="Líquido"
+                   Text="{Binding SalarioLiquido, StringFormat='R$ {0:0.0,0}'}"/>
+                <Label Text="Líquido"
                    StyleClass="Body"
                    TextColor="Gray"
                    HorizontalOptions="Center"/>
-        </StackLayout>
+            </StackLayout>
+
+            <TableView x:Name="tbTabela">
+                <TableRoot>
+                    <TableSection Title="Teste">
+                        <ViewCell>
+                            <ListView x:Name="lvDetalheDoRecibo" 
+                                  ItemsSource="{Binding Vencimentos, Mode=TwoWay}" 
+                                  VerticalOptions="Center"
+                                  BackgroundColor="White"
+                                  SeparatorVisibility="Default"
+                                  SeparatorColor="Black"                  
+                                  >
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ImageCell x:Name="lImgCellTeste" 
+                                       Text="{Binding Vdb}"
+                                       Detail="{Binding DescricaoVencto}" 
+                                       TextColor="Black"                      
+                                       />
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+            
 
 
-
-        <ListView x:Name="lvDetalheDoRecibo" 
-                  ItemsSource="{Binding Vencimentos, Mode=TwoWay}" 
-                  VerticalOptions="Center"
-                  BackgroundColor="White"
-                  SeparatorVisibility="Default"
-                  SeparatorColor="Black">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ImageCell x:Name="lImgCellTeste" 
-                                   Text="{Binding Vdb}"
-                                   Detail="{Binding DescricaoVencto}" 
-                                   TextColor="Black"                      
-                                   />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
     </StackLayout>
-
+    </ScrollView>
 
 </ContentPage>

@@ -49,7 +49,7 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
                 recibo.CodigoFolha = "44";
                 recibo.SalarioContratual = 2456;                
 
-                for (int j = 0; j < 7; j++)
+                for (int j = 0; j < 20; j++)
                 {
                     ReciboDePagamentoVenctoEntities vencimentos = new ReciboDePagamentoVenctoEntities();
                     vencimentos.Vdb = vdbs[rdn.Next(0, 7)];
