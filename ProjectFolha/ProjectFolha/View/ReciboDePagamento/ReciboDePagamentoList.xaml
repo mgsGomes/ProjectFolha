@@ -4,13 +4,16 @@
              x:Class="ProjectFolha.View.ReciboDePagamento.ReciboDePagamentoLista"
              Title="Recibos" >
 
-    <StackLayout Padding="20" Spacing="10" BackgroundColor="#E0E0E0">
+    <StackLayout Padding="20" 
+                 Spacing="10" 
+                 BackgroundColor="#E0E0E0">
 
         
         <Label Text="Contrato selecionado:" 
-                   StyleClass="Subheader" 
-                   TextColor="Black"/>
-        <StackLayout Padding="10" BackgroundColor="White">
+               StyleClass="Subheader" 
+               TextColor="Black"/>
+        <StackLayout Padding="10" 
+                     BackgroundColor="White">
             
             <Picker x:Name="Cmb_ListaContratos" 
                     Title="Unidade/Contrato" 

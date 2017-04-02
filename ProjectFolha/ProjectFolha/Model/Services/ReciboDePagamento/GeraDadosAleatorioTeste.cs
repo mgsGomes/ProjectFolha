@@ -73,14 +73,18 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
                 recibo.TotalDesc = lTotal;
                 lTotal = 0;
 
-                for (int j = 0; j < 7; j++)
-                {
-                    ReciboDePagamentoBaseEntities bases = new ReciboDePagamentoBaseEntities();
-                    bases.Vdb = vdbs[rdn.Next(0, 7)];
-                    bases.DescricaoBase = vdbsDesc[rdn.Next(0, 7)];
-                    bases.ValorBase = vdbsValor[rdn.Next(0, 7)];                    
-                    recibo.Bases.Add(bases);
-                };
+                recibo.TotalBaseInss = 2887;
+                recibo.TotalBaseIrrf = 2887;
+                recibo.TotalBaseFgts = 230;
+
+                //for (int j = 0; j < 7; j++)
+                //{
+                //    ReciboDePagamentoBaseEntities bases = new ReciboDePagamentoBaseEntities();
+                //    bases.Vdb = vdbs[rdn.Next(0, 7)];
+                //    bases.DescricaoBase = vdbsDesc[rdn.Next(0, 7)];
+                //    bases.ValorBase = vdbsValor[rdn.Next(0, 7)];                    
+                //    recibo.Bases.Add(bases);
+                //};
 
                 recibo.SalarioLiquido = (recibo.TotalVencto - recibo.TotalDesc);             
 

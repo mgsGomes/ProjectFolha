@@ -50,9 +50,11 @@ namespace ProjectFolha.View.ReciboDePagamento
             if (selectedRecibo == null)
                 return;
             //App.NavigateMasterDetail(new ReciboDePagamentoDetail(selectedRecibo));
-            //Navigation.PushAsync(new ReciboDePagamentoDetail(selectedRecibo));
-            Navigation.PushAsync(new Page1());
+           //Navigation.PushAsync(new ReciboDePagamentoDetail(selectedRecibo));
+            Navigation.PushAsync(new Page1(selectedRecibo));
             lvRecibos.SelectedItem = null;
         }
     }
 }
+
+

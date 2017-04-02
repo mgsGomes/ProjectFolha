@@ -1,66 +1,290 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectFolha.View.ReciboDePagamento.ReciboDePagamentoDetail"
-             Title="Demonstrativo de Pagamento">
-
-    <ScrollView>
-    <StackLayout Padding="20" 
-                 Spacing="20" 
-                 HorizontalOptions="FillAndExpand"
-                 BackgroundColor="#E0E0E0">
-
-            <StackLayout Spacing="2">
-                <Label StyleClass="Header"
+             x:Class="ProjectFolha.View.ReciboDePagamento.Page1"
+             xmlns:pages="clr-namespace:ProjectFolha.View.ReciboDePagamento;assembly=ProjectFolha"
+             Title="Demonstrativo de pagamento">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Totais">
+        <StackLayout Spacing="2">
+            <StackLayout  BackgroundColor="#CCCCCC"
+                          Spacing="2"
+                          Orientation="Horizontal">
+                <Label Text="Folha Mensal"                         
+                       HorizontalOptions="Center"
+                       StyleClass="Subheader"
+                       TextColor="#433C3C"
+                       Margin="10"/>
+                <Label Text="{Binding DataFolha, StringFormat='{0:dd/MM/yyyy}'}"                          
+                       HorizontalOptions="EndAndExpand"
+                       StyleClass="Subheader"
+                       TextColor="#433C3C"
+                       Margin="10"/>
+            </StackLayout>
+            
+            <Label StyleClass="Header"
                    TextColor="Green"
                    HorizontalOptions="Center"
                    Text="{Binding SalarioLiquido, StringFormat='R$ {0:0.0,0}'}"/>
-                <Label Text="Líquido"
+            <Label Text="Líquido"
                    StyleClass="Body"
-                   TextColor="Gray"
+                   TextColor="#433C3C"
                    HorizontalOptions="Center"/>
+
+            <RelativeLayout BackgroundColor="#E0E0E0">
+
+                <StackLayout x:Name="Red"
+                             WidthRequest="180" 
+                             HeightRequest="80"
+                             RelativeLayout.XConstraint=
+                                 "{ConstraintExpression Type=Constant, 
+                                                        Constant=10}"
+                             RelativeLayout.YConstraint=
+                                 "{ConstraintExpression Type=Constant, 
+                                                        Constant=20}" >
+
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Salário Mensal"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+
+                </StackLayout>
+
+                <StackLayout WidthRequest="180" 
+                             HeightRequest="80"
+                             RelativeLayout.XConstraint=
+                                "{ConstraintExpression Type=RelativeToParent, 
+                                                        Property=Width,
+                                                        Factor=0.51}"
+                             RelativeLayout.YConstraint=
+                                 "{ConstraintExpression Type=RelativeToParent, 
+                                                        Property=Height,
+                                                        Factor=0.055}" >
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding TotalBaseInss, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Base INSS"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+
+                </StackLayout>
+
+
+                <StackLayout WidthRequest="180" 
+                             HeightRequest="80"
+                             RelativeLayout.XConstraint=                        
+                                 "{ConstraintExpression Type=Constant, 
+                                                        Constant=10}"
+                             RelativeLayout.YConstraint=
+                                 "{ConstraintExpression Type=Constant, 
+                                                        Constant=135}">
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding TotalBaseIrrf, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Base IRRF"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout WidthRequest="180" 
+                             HeightRequest="80"
+                             RelativeLayout.XConstraint=
+                                 "{ConstraintExpression Type=RelativeToParent, 
+                                                        Property=Width,
+                                                        Factor=0.51}"
+                             RelativeLayout.YConstraint=
+                                "{ConstraintExpression Type=Constant, 
+                                                        Constant=135}">
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding TotalBaseFgts, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Base FGTS"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+
+
+                <StackLayout WidthRequest="180" 
+                             HeightRequest="80"
+                             RelativeLayout.XConstraint=                        
+                                "{ConstraintExpression Type=Constant, 
+                                                        Constant=10}"
+                             RelativeLayout.YConstraint=
+                                "{ConstraintExpression Type=Constant, 
+                                                        Constant=250}">
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding TotalVencto, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Total de Vencimentos"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout WidthRequest="180" 
+                             HeightRequest="80"
+                             RelativeLayout.XConstraint=                        
+                                "{ConstraintExpression Type=RelativeToParent, 
+                                                        Property=Width,
+                                                        Factor=0.51}"
+                            RelativeLayout.YConstraint=
+                                 "{ConstraintExpression Type=Constant, 
+                                                        Constant=250}">
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding TotalDesc, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Total de Descontos"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+
+            </RelativeLayout>
+            
+        </StackLayout>
+    </ContentPage>
+    
+    <ContentPage Title="Vencimentos">
+        <StackLayout BackgroundColor="#CCCCCC">
+            <StackLayout  BackgroundColor="#CCCCCC"
+                          Spacing="2"
+                          Orientation="Horizontal">
+                <Label Text="Folha Mensal"                         
+                       HorizontalOptions="Center"
+                       StyleClass="Subheader"
+                       TextColor="#433C3C"
+                       Margin="10"/>
+                <Label Text="{Binding DataFolha, StringFormat='{0:dd/MM/yyyy}'}"                          
+                       HorizontalOptions="EndAndExpand"
+                       StyleClass="Subheader"
+                       TextColor="#433C3C"
+                       Margin="10"/>
             </StackLayout>
+            
+            <StackLayout Padding="20"
+                         Spacing="10"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#E0E0E0">
 
-            <TabbedPage>
-                <TabbedPage.Children>
-                    <ContentPage Title="Pagina 1">
-                        <StackLayout BackgroundColor="Blue">
-                            
-                        </StackLayout>
-                    </ContentPage>
-                </TabbedPage.Children>
-            </TabbedPage>
-
-            <!--<TableView x:Name="tbTabela">
-                <TableRoot>
-                    <TableSection Title="Teste">
-                        <ViewCell>
-                            <ListView x:Name="lvDetalheDoRecibo" 
+                
+                <Label Text="Vencimentos:"
+                       StyleClass="Subheader"
+                       TextColor="Black"/>
+                
+                <StackLayout>
+                    <ListView x:Name="lvDetalheDoReciboVencomentos" 
                                   ItemsSource="{Binding Vencimentos, Mode=TwoWay}" 
                                   VerticalOptions="Center"
                                   BackgroundColor="White"
                                   SeparatorVisibility="Default"
                                   SeparatorColor="Black"                  
                                   >
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <ImageCell x:Name="lImgCellTeste" 
-                                       Text="{Binding Vdb}"
-                                       Detail="{Binding DescricaoVencto}" 
-                                       TextColor="Black"                      
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ImageCell Text="{Binding Vdb}"
+                                           Detail="{Binding DescricaoVencto}" 
+                                           TextColor="Black"                      
                                        />
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </ViewCell>
-                    </TableSection>
-                </TableRoot>
-            </TableView>-->
-
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
             
+            <StackLayout  BackgroundColor="#CCCCCC"
+                          Spacing="2"
+                          Orientation="Horizontal">
+                <Label Text="Total:"                         
+                       HorizontalOptions="Center"
+                       StyleClass="Subheader"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Margin="10"/>
+                <Label Text="{Binding TotalVencto, StringFormat='R$ {0:0.0,0}'}"                          
+                       HorizontalOptions="EndAndExpand"
+                       StyleClass="Subheader"
+                       TextColor="Green"
+                       FontAttributes="Bold"
+                       Margin="10"/>
+            </StackLayout>
+        </StackLayout>
+  </ContentPage>
+
+    <ContentPage Title="Descontos">
+        <StackLayout BackgroundColor="#CCCCCC">
+            <StackLayout  BackgroundColor="#CCCCCC"
+                          Spacing="2"
+                          Orientation="Horizontal">
+                <Label Text="Folha Mensal"                         
+                       HorizontalOptions="Center"
+                       StyleClass="Subheader"
+                       TextColor="#433C3C"
+                       Margin="10"/>
+                <Label Text="{Binding DataFolha, StringFormat='{0:dd/MM/yyyy}'}"                          
+                       HorizontalOptions="EndAndExpand"
+                       StyleClass="Subheader"
+                       TextColor="#433C3C"
+                       Margin="10"/>
+            </StackLayout>
+
+            <StackLayout Padding="20"
+                         Spacing="10"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#E0E0E0">
 
 
-    </StackLayout>
-    </ScrollView>
+                <Label Text="Descontos:"
+                       StyleClass="Subheader"
+                       TextColor="Black"/>
 
-</ContentPage>
+                <StackLayout>
+                    <ListView x:Name="lvDetalheDoReciboDescontos" 
+                                ItemsSource="{Binding Descontos, Mode=TwoWay}" 
+                                VerticalOptions="Center"
+                                BackgroundColor="White"
+                                SeparatorVisibility="Default"
+                                SeparatorColor="Black"                  
+                                  >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ImageCell Text="{Binding Vdb}"
+                                           Detail="{Binding DescricaoDesc}" 
+                                           TextColor="Black"                      
+                                       />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout  BackgroundColor="#CCCCCC"
+                          Spacing="2"
+                          Orientation="Horizontal">
+                <Label Text="Total:"                         
+                       HorizontalOptions="Center"
+                       StyleClass="Subheader"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Margin="10"/>
+                <Label Text="{Binding TotalDesc, StringFormat='R$ {0:0.0,0}'}"                          
+                       HorizontalOptions="EndAndExpand"
+                       StyleClass="Subheader"
+                       TextColor="Red"
+                       FontAttributes="Bold"
+                       Margin="10"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

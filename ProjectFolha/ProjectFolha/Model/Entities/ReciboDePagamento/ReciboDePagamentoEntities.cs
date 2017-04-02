@@ -94,12 +94,33 @@ namespace ProjectFolha.Model.Entities.ReciboDePagamento
             set { totalDesc = value; OnPropertyChange(); }
         }
 
-        private ObservableCollection<ReciboDePagamentoBaseEntities> bases = new ObservableCollection<ReciboDePagamentoBaseEntities>();
-        public ObservableCollection<ReciboDePagamentoBaseEntities> Bases
+        private decimal totalBaseInss;
+        public decimal TotalBaseInss
         {
-            get { return bases; }
-            set { bases = value; OnPropertyChange(); }
+            get { return totalBaseInss; }
+            set { totalBaseInss = value; OnPropertyChange(); }
         }
+
+        private decimal totalBaseIrrf;
+        public decimal TotalBaseIrrf
+        {
+            get { return totalBaseIrrf; }
+            set { totalBaseIrrf = value; OnPropertyChange(); }
+        }
+
+        private decimal totalBaseFgts;
+        public decimal TotalBaseFgts
+        {
+            get { return totalBaseFgts; }
+            set { totalBaseFgts = value; OnPropertyChange(); }
+        }
+
+        //private ObservableCollection<ReciboDePagamentoBaseEntities> bases = new ObservableCollection<ReciboDePagamentoBaseEntities>();
+        //public ObservableCollection<ReciboDePagamentoBaseEntities> Bases
+        //{
+        //    get { return bases; }
+        //    set { bases = value; OnPropertyChange(); }
+        //}
 
     }
 }
