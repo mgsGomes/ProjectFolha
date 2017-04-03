@@ -30,6 +30,91 @@
                    StyleClass="Body"
                    TextColor="#433C3C"
                    HorizontalOptions="Center"/>
+            <!--<StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical"
+                             Margin="10,20,0,0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Salário Mensal"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             Margin="60, 20, 0, 0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Salário Mensal"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical"
+                             Margin="10,20,0,0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Salário Mensal"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             Margin="60, 20, 0, 0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Salário Mensal"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical"
+                             Margin="10,20,0,0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Salário Mensal"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             Margin="60, 20, 0, 0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                    <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
+                    <Label Text="Salário Mensal"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>-->
+            
 
             <RelativeLayout BackgroundColor="#E0E0E0">
 
