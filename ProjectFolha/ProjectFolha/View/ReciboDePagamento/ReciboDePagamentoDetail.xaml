@@ -6,117 +6,125 @@
              Title="Demonstrativo de pagamento">
   <!--Pages can be added as references or inline-->
     <ContentPage Title="Totais">
-        <StackLayout Spacing="2">
-            <StackLayout  BackgroundColor="#CCCCCC"
+        <ScrollView>
+            <StackLayout Spacing="2">
+                <StackLayout  BackgroundColor="#CCCCCC"
                           Spacing="2"
                           Orientation="Horizontal">
-                <Label Text="Folha Mensal"                         
+                    <Label Text="Folha Mensal"                         
                        HorizontalOptions="Center"
                        StyleClass="Subheader"
                        TextColor="#433C3C"
                        Margin="10"/>
-                <Label Text="{Binding DataFolha, StringFormat='{0:dd/MM/yyyy}'}"                          
+                    <Label Text="{Binding DataFolha, StringFormat='{0:dd/MM/yyyy}'}"                          
                        HorizontalOptions="EndAndExpand"
                        StyleClass="Subheader"
                        TextColor="#433C3C"
                        Margin="10"/>
-            </StackLayout>
-            
-            <Label StyleClass="Header"
+                </StackLayout>
+
+                <Label StyleClass="Header"
                    TextColor="Green"
                    HorizontalOptions="Center"
                    Text="{Binding SalarioLiquido, StringFormat='R$ {0:0.0,0}'}"/>
-            <Label Text="Líquido"
+                <Label Text="Líquido"
                    StyleClass="Body"
                    TextColor="#433C3C"
                    HorizontalOptions="Center"/>
-            <!--<StackLayout Orientation="Horizontal">
-                <StackLayout Orientation="Vertical"
-                             Margin="10,20,0,0"
-                             HeightRequest="80"
-                             HorizontalOptions="CenterAndExpand">
-                    <Label StyleClass="Header"
-                           TextColor="Green"
-                           HorizontalOptions="Center"
-                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
-                    <Label Text="Salário Mensal"
-                           StyleClass="Body"
-                           TextColor="#433C3C"
-                           HorizontalOptions="Center"/>
-                </StackLayout>
-                <StackLayout Orientation="Vertical"
-                             Margin="60, 20, 0, 0"
-                             HeightRequest="80"
-                             HorizontalOptions="CenterAndExpand">
-                    <Label StyleClass="Header"
-                           TextColor="Green"
-                           HorizontalOptions="Center"
-                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
-                    <Label Text="Salário Mensal"
-                           StyleClass="Body"
-                           TextColor="#433C3C"
-                           HorizontalOptions="Center"/>
-                </StackLayout>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <StackLayout Orientation="Vertical"
-                             Margin="10,20,0,0"
-                             HeightRequest="80"
-                             HorizontalOptions="CenterAndExpand">
-                    <Label StyleClass="Header"
-                           TextColor="Green"
-                           HorizontalOptions="Center"
-                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
-                    <Label Text="Salário Mensal"
-                           StyleClass="Body"
-                           TextColor="#433C3C"
-                           HorizontalOptions="Center"/>
-                </StackLayout>
-                <StackLayout Orientation="Vertical"
-                             Margin="60, 20, 0, 0"
-                             HeightRequest="80"
-                             HorizontalOptions="CenterAndExpand">
-                    <Label StyleClass="Header"
-                           TextColor="Green"
-                           HorizontalOptions="Center"
-                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
-                    <Label Text="Salário Mensal"
-                           StyleClass="Body"
-                           TextColor="#433C3C"
-                           HorizontalOptions="Center"/>
-                </StackLayout>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <StackLayout Orientation="Vertical"
-                             Margin="10,20,0,0"
-                             HeightRequest="80"
-                             HorizontalOptions="CenterAndExpand">
-                    <Label StyleClass="Header"
-                           TextColor="Green"
-                           HorizontalOptions="Center"
-                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
-                    <Label Text="Salário Mensal"
-                           StyleClass="Body"
-                           TextColor="#433C3C"
-                           HorizontalOptions="Center"/>
-                </StackLayout>
-                <StackLayout Orientation="Vertical"
-                             Margin="60, 20, 0, 0"
-                             HeightRequest="80"
-                             HorizontalOptions="CenterAndExpand">
-                    <Label StyleClass="Header"
-                           TextColor="Green"
-                           HorizontalOptions="Center"
-                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
-                    <Label Text="Salário Mensal"
-                           StyleClass="Body"
-                           TextColor="#433C3C"
-                           HorizontalOptions="Center"/>
-                </StackLayout>
-            </StackLayout>-->
-            
 
-            <RelativeLayout BackgroundColor="#E0E0E0">
+                <StackLayout Orientation="Horizontal">
+                    <!--Salario contratual-->
+                    <StackLayout Orientation="Vertical"
+                             Margin="10,20,0,0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                        <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding SalarioContratual, StringFormat='R$ {0:0.0,0}'}"/>
+                        <Label Text="Salário Mensal"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <!--Base INSS-->
+                    <StackLayout Orientation="Vertical"
+                             Margin="60, 20, 0, 0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                        <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding TotalBaseInss, StringFormat='R$ {0:0.0,0}'}"/>
+                        <Label Text="Base INSS"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <!--Base IRRF-->
+                    <StackLayout Orientation="Vertical"
+                             Margin="10,20,0,0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                        <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding TotalBaseIrrf, StringFormat='R$ {0:0.0,0}'}"/>
+                        <Label Text="Base IRRF"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <!--Base FGTS-->
+                    <StackLayout Orientation="Vertical"
+                             Margin="60, 20, 0, 0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                        <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding TotalBaseFgts, StringFormat='R$ {0:0.0,0}'}"/>
+                        <Label Text="Base FGTS"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <!--Total de Vencimentos-->
+                    <StackLayout Orientation="Vertical"
+                             Margin="10,20,0,0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                        <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding TotalVencto, StringFormat='R$ {0:0.0,0}'}"/>
+                        <Label Text="Total de Vencimentos"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <!--Total de Descontos-->
+                    <StackLayout Orientation="Vertical"
+                             Margin="60, 20, 0, 0"
+                             HeightRequest="80"
+                             HorizontalOptions="CenterAndExpand">
+                        <Label StyleClass="Header"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           Text="{Binding TotalDesc, StringFormat='R$ {0:0.0,0}'}"/>
+                        <Label Text="Total de Descontos"
+                           StyleClass="Body"
+                           TextColor="#433C3C"
+                           HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <!--<RelativeLayout BackgroundColor="#E0E0E0">
 
                 <StackLayout x:Name="Red"
                              WidthRequest="180" 
@@ -236,9 +244,10 @@
                            HorizontalOptions="Center"/>
                 </StackLayout>
 
-            </RelativeLayout>
-            
-        </StackLayout>
+            </RelativeLayout>-->
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage>
     
     <ContentPage Title="Vencimentos">

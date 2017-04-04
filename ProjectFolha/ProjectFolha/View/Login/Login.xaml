@@ -19,7 +19,10 @@
                FontAttributes="Bold"
                TextColor="Black"
                StyleClass="Header"/>
-        
+
+        <Entry Placeholder="Identificador da empresa"
+               Text="{Binding IdentificadorEmpresa}"
+               TextColor="Black"/>
         <Entry Placeholder="Username"
                Text="{Binding Username}"
                TextColor="Black"/>

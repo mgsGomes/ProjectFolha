@@ -9,6 +9,7 @@ using ProjectFolha.View.ReciboDePagamento;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ProjectFolha.View.Login;
 
 namespace ProjectFolha
 {
@@ -28,11 +29,13 @@ namespace ProjectFolha
             var Page2 = new MasterPageItem() { Title = "Ficha do Funcionário", Icon = "ficha", TargetType = typeof(B) };
             var Page3 = new MasterPageItem() { Title = "Comprovante de Rendimento", Icon = "comprovante", TargetType = typeof(B) };
             var Page4 = new MasterPageItem() { Title = "Recibo de Pagamento", Icon = "recibo",TargetType = typeof(ReciboDePagamentoLista) };
+            var Page5 = new MasterPageItem() { Title = "Sair", TargetType = typeof(Login) };
 
             menuList.Add(Page1);
             menuList.Add(Page2);
             menuList.Add(Page3);
             menuList.Add(Page4);
+            menuList.Add(Page5);
 
             navigationDrawerList.ItemsSource = menuList;
 
@@ -60,7 +63,15 @@ namespace ProjectFolha
             var item = (MasterPageItem)e.SelectedItem;
             Type page = item.TargetType;
 
-            App.MasterDetail.Detail = new NavigationPage((Page)Activator.CreateInstance(page));
+            if(item.Title == "Sair")
+            {
+                Application.Current.MainPage = new Login();
+            }
+            else
+            {
+                App.MasterDetail.Detail = new NavigationPage((Page)Activator.CreateInstance(page));
+            };
+            
             App.MasterDetail.IsPresented = false;
             
             //Detail = new NavigationPage((Page)Activator.CreateInstance(page));
