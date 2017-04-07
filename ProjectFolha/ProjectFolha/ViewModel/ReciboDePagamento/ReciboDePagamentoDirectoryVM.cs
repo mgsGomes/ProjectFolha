@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using ProjectFolha.Services;
 
 namespace ProjectFolha.ViewModel.ReciboDePagamento
 {
@@ -86,6 +87,13 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
             }
 
             return unidadeContrato;
+        }
+
+        public async Task<List<ReciboDePagamentoEntities>> GetRecibos()
+        {
+            var Service = new Services.AzureServices<ReciboDePagamentoEntities>();
+            var Items = await Service.GetTable();
+            return Items.ToList();
         }
     }
 }
