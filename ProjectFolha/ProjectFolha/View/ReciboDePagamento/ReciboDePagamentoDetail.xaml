@@ -203,7 +203,7 @@
                     <Label Text="Base FGTS"
                            StyleClass="Body"
                            TextColor="#433C3C"
-                           HorizontalOptions="Center"/>
+                           HorizontalOptions="Center"/>\
                 </StackLayout>
 
 
