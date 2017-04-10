@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
+using Microsoft.WindowsAzure.MobileServices.Sync;
+using ProjectFolha.Model.Entities;
 
 namespace ProjectFolha.Services
 {
@@ -11,6 +13,7 @@ namespace ProjectFolha.Services
     {
         IMobileServiceClient Client;
         IMobileServiceTable<T> Table;
+  
 
         public AzureServices()
         {
@@ -19,9 +22,10 @@ namespace ProjectFolha.Services
             Table = Client.GetTable<T>();
         }
 
-        public Task<IEnumerable<T>> GetTable()
+        public Task<List<T>> GetTable()
         {
-            return Table.ToEnumerableAsync();
+            var teste = Table.ToListAsync();
+            return Table.ToListAsync();
         }
     }    
 }

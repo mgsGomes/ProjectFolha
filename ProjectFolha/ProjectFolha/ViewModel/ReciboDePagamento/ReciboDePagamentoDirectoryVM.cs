@@ -75,6 +75,23 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
             IsBusy = false;
         }
 
+        public async void CarregaReciboPorContrato(string unidade, int contrato)
+        {
+            if(!IsBusy)
+            {
+                IsBusy = true;
+
+                var ReciboCarregado = GeraDadosAleatorioTeste.CarregaReciboPorContrato(unidade, contrato);
+
+                foreach(var recibo in ReciboCarregado.ReciboDePagamentoEntities)
+                {
+                    RecibosDePagamentos.Add(recibo);
+                }
+            }
+
+            IsBusy = false;
+        }
+
         public Dictionary<String, String> ListaDeContratosDaPessoa()
         {
             Dictionary<String, String> unidadeContrato = new Dictionary<string, string>();

@@ -5,11 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using ProjectFolha.View.Login;
+using AppServiceHelpers.Abstractions;
+using AppServiceHelpers;
+using ProjectFolha.Model.Entities;
 
 namespace ProjectFolha
 {
     public partial class App : Application
     {
+        
         public static MasterDetailPage MasterDetail { get; set; }
 
         public async static Task NavigateMasterDetail(Page page)
