@@ -17,10 +17,7 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
             ObservableCollection<ReciboDePagamentoEntities> reciboDePagamento = new ObservableCollection<ReciboDePagamentoEntities>();
             ReciboDePagamentoList reciboDePagamentoList = new ReciboDePagamentoList();
 
-            decimal lTotal = 0;
-
-
-            reciboDePagamento = new ObservableCollection<ReciboDePagamentoEntities>();
+            decimal lTotal = 0;           
 
             string[] names = { "Micael Gomes de Souza", "Micael Gomes de Souza"};
             string[] lastNames = { "Hernández", "García", "Martínez", "López", "González" };
@@ -38,8 +35,6 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
             decimal[] vdbsValorDesc = { 74, 11, 317, 49 };
 
             Random rdn = new Random(DateTime.Now.Millisecond);
-
-            reciboDePagamento = new ObservableCollection<ReciboDePagamentoEntities>();
 
             var dataDaFolha = new DateTime(2016, 1, 1);
 

@@ -28,5 +28,11 @@ namespace ProjectFolha.Model.Entities.ReciboDePagamento
             get { return valorDesc; }
             set { valorDesc = value; OnPropertyChange(); }
         }
+
+        public string DescricaoCompletaDesc
+        {
+            get { return vdb + " - " + descricaoDesc; }
+            set { }
+        }
     }
 }

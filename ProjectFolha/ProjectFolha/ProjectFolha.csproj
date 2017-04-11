@@ -46,6 +46,9 @@
     </Compile>
     <Compile Include="Model\Entities\Repository.cs" />
     <Compile Include="Model\Entities\RHEstadoCivil.cs" />
+    <Compile Include="Model\FichaDoFuncionario\FichaDoFuncionarioEntities.cs" />
+    <Compile Include="Model\FichaDoFuncionario\FichaDoFuncionarioList.cs" />
+    <Compile Include="Model\FichaDoFuncionario\Services\GeraDadosFichaDoFuncionario.cs" />
     <Compile Include="Model\ObservableBaseObject.cs" />
     <Compile Include="Model\ReciboDePagamento\ReciboDePagamentoBaseEntities.cs" />
     <Compile Include="Model\ReciboDePagamento\ReciboDePagamentoDescEntities.cs" />
