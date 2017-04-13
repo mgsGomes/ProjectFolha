@@ -10,6 +10,8 @@ using ProjectFolha.View.ReciboDePagamento;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ProjectFolha.View.Login;
+using ProjectFolha.Model.FichaDoFuncionario;
+using ProjectFolha.View.FichaDoFuncionario;
 
 namespace ProjectFolha
 {
@@ -26,7 +28,7 @@ namespace ProjectFolha
             menuList = new List<MasterPageItem>();
 
             var Page1 = new MasterPageItem() { Title = "Home", Icon = "home", TargetType = typeof(A) };
-            var Page2 = new MasterPageItem() { Title = "Ficha do Funcionário", Icon = "ficha", TargetType = typeof(B) };
+            var Page2 = new MasterPageItem() { Title = "Ficha do Funcionário", Icon = "ficha", TargetType = typeof(FichaDoFuncionarioLista) };
             var Page3 = new MasterPageItem() { Title = "Comprovante de Rendimento", Icon = "comprovante", TargetType = typeof(B) };
             var Page4 = new MasterPageItem() { Title = "Recibo de Pagamento", Icon = "recibo",TargetType = typeof(ReciboDePagamentoLista) };
             var Page5 = new MasterPageItem() { Title = "Sair", TargetType = typeof(Login) };

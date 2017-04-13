@@ -66,5 +66,29 @@ namespace ProjectFolha.Model.FichaDoFuncionario.Services
             return fichaDoFuncionarioList;
 
         }
+
+        public static FichaDoFuncionarioList CarregaListaDeContratosPessoa()
+        {
+            ObservableCollection<FichaDoFuncionarioListaDeContratos> listaDeContratos = new ObservableCollection<FichaDoFuncionarioListaDeContratos>();
+            FichaDoFuncionarioList fichaDeFuncionarioListaDeContratos = new FichaDoFuncionarioList();
+
+            string[] unidades = { "0001", "0002" };
+            int[] contratos = { 1022, 1023 };
+            string[] names = { "Micael Gomes de Souza", "Micael Gomes de Souza" };
+
+            for (var i = 0; i < 2; i++)
+            {
+                FichaDoFuncionarioListaDeContratos lista = new FichaDoFuncionarioListaDeContratos();
+                lista.Unidade = unidades[i];
+                lista.Contrato = contratos[i];
+                lista.Nome = names[i];
+                lista.UnidadeContrato = unidades[i] + "/" + contratos[i] + " - " + names[i];
+                listaDeContratos.Add(lista);
+            }
+
+            fichaDeFuncionarioListaDeContratos.FichaDoFuncionarioListaDeContratos = listaDeContratos;
+
+            return fichaDeFuncionarioListaDeContratos;
+        }
     }
 }

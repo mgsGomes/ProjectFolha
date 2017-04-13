@@ -48,6 +48,7 @@
     <Compile Include="Model\Entities\RHEstadoCivil.cs" />
     <Compile Include="Model\FichaDoFuncionario\FichaDoFuncionarioEntities.cs" />
     <Compile Include="Model\FichaDoFuncionario\FichaDoFuncionarioList.cs" />
+    <Compile Include="Model\FichaDoFuncionario\FichaDoFuncionarioListaDeContratos.cs" />
     <Compile Include="Model\FichaDoFuncionario\Services\GeraDadosFichaDoFuncionario.cs" />
     <Compile Include="Model\ObservableBaseObject.cs" />
     <Compile Include="Model\ReciboDePagamento\ReciboDePagamentoBaseEntities.cs" />
@@ -58,8 +59,12 @@
     <Compile Include="Model\ReciboDePagamento\ReciboDePagamentoVenctoEntities.cs" />
     <Compile Include="Model\ReciboDePagamento\Services\GeraDadosAleatorioTeste.cs" />
     <Compile Include="Services\AzureServices.cs" />
+    <Compile Include="ViewModel\FichaDoFuncionario\FichaDoFuncionarioDirectoryVM.cs" />
     <Compile Include="ViewModel\ReciboDePagamento\ReciboDePagamentoDirectoryVM.cs" />
     <Compile Include="ViewModel\VMTeste.cs" />
+    <Compile Include="View\FichaDoFuncionario\FichaDoFuncionarioList.xaml.cs">
+      <DependentUpon>FichaDoFuncionarioList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Login\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -213,7 +218,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\ComprovanteDeRendimentos\" />
-    <Folder Include="View\FichaDoFuncionario\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\Login\Login.xaml">
@@ -241,6 +245,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\ReciboDePagamento\Page1Tab1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\FichaDoFuncionario\FichaDoFuncionarioList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

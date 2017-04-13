@@ -1,10 +1,5 @@
 ﻿using ProjectFolha.Model.Entities;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectFolha.Model.FichaDoFuncionario
 {
@@ -16,5 +11,14 @@ namespace ProjectFolha.Model.FichaDoFuncionario
             get { return fichaDoFuncionarioEntities; }
             set { fichaDoFuncionarioEntities = value; }
         }
+
+        private ObservableCollection<FichaDoFuncionarioListaDeContratos> fichaDoFuncionarioListaDeContratos = new ObservableCollection<FichaDoFuncionarioListaDeContratos>();
+        public ObservableCollection<FichaDoFuncionarioListaDeContratos> FichaDoFuncionarioListaDeContratos
+        {
+            get { return fichaDoFuncionarioListaDeContratos; }
+            set { fichaDoFuncionarioListaDeContratos = value; }
+        }
+
+
     }
 }
