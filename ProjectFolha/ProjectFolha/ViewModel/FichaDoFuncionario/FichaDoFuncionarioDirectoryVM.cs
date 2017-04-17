@@ -75,5 +75,22 @@ namespace ProjectFolha.ViewModel.FichaDoFuncionario
 
             IsBusy = false;
         }
+
+        public async void CarregaFichaPorContrato(string unidade, int contrato)
+        {
+            if (!IsBusy)
+            {
+                IsBusy = true;
+
+                var FichaCarregada = GeraDadosFichaDoFuncionario.CarregaFichaPorContrato(unidade, contrato);
+
+                foreach (var ficha in FichaCarregada.FichaDoFuncionarioEntities)
+                {
+                    FichasDoFuncionario.Add(ficha);
+                }
+            }
+
+            IsBusy = false;
+        }
     }
 }

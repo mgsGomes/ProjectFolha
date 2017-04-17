@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectFolha.View.FichaDoFuncionario.FichaDoFuncionarioDetail"
+             xmlns:pages="clr-namespace:ProjectFolha.View.FichaDoFuncionario;assembly=ProjectFolha.View.FichaDoFuncionario"
+             Title="Dados">
+  
+  <ContentPage Title="Pessoais">
+        <ScrollView>
+            <StackLayout Padding="20" 
+                         Spacing="10" 
+                         BackgroundColor="White">
+
+                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
+                                        
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nome: " TextColor="Gray"/>
+                    <Label x:Name="lbl_Nome" TextColor="Black" FontAttributes="Bold"/>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Data de Nascimento: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Nascimento" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Local: " TextColor="Gray"/>
+                        <Label x:Name="lbl_LocalNascimento" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Sexo: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Sexo" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Estado Civil: " TextColor="Gray"/>
+                        <Label x:Name="lbl_EstadoCivil" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Mãe: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Mae" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Pai: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Pai" TextColor="Black"/>
+                    </StackLayout>                              
+                </StackLayout>
+                <BoxView StyleClass="HorizontalRule"/>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Instrução: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Instrucao" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView StyleClass="HorizontalRule"/>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Endereço: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Endereco" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Bairro: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Bairro" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="CEP: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Cep" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Cidade: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Cidade" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView StyleClass="HorizontalRule"/>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Telefone: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Telefone" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Celular: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Celular" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView StyleClass="HorizontalRule"/>            
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+  <ContentPage Title="Documentos">
+    <StackLayout>
+      <Label Text="Blue" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5"  />
+      <BoxView Color="Blue" VerticalOptions="FillAndExpand" />
+    </StackLayout>
+  </ContentPage>
+</TabbedPage>

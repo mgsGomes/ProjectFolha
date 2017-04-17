@@ -43,7 +43,7 @@ namespace ProjectFolha.Model.FichaDoFuncionario.Services
                 dadosDoFuncionario.Cidade = "Caxias do Sul";
                 dadosDoFuncionario.Uf = "RS";
                 dadosDoFuncionario.Telefone = "54-32292921";
-                dadosDoFuncionario.Cep = "54-981114412";
+                dadosDoFuncionario.Celular = "54-981114412";
                 dadosDoFuncionario.Cpf = "01688687780";
                 dadosDoFuncionario.Identidade = "3418659365482";
                 dadosDoFuncionario.DataIdentidade = new DateTime(2005, 5, 9);
@@ -89,6 +89,24 @@ namespace ProjectFolha.Model.FichaDoFuncionario.Services
             fichaDeFuncionarioListaDeContratos.FichaDoFuncionarioListaDeContratos = listaDeContratos;
 
             return fichaDeFuncionarioListaDeContratos;
+        }
+
+        public static FichaDoFuncionarioList CarregaFichaPorContrato(string unidade, int contrato)
+        {
+            FichaDoFuncionarioList fichaDoFuncionarioList = new FichaDoFuncionarioList();
+            FichaDoFuncionarioList fichaDoFuncionarioPorContrato = new FichaDoFuncionarioList();
+
+            fichaDoFuncionarioList = CarregaFichaDoFuncionario();
+
+            for (int i = 0; i < fichaDoFuncionarioList.FichaDoFuncionarioEntities.Count; i++)
+            {
+                if ((fichaDoFuncionarioList.FichaDoFuncionarioEntities[i].Unidade == unidade) &&
+                    (fichaDoFuncionarioList.FichaDoFuncionarioEntities[i].Contrato == contrato))
+                {
+                    fichaDoFuncionarioPorContrato.FichaDoFuncionarioEntities.Add(fichaDoFuncionarioList.FichaDoFuncionarioEntities[i]);
+                }
+            }
+            return fichaDoFuncionarioPorContrato;
         }
     }
 }
