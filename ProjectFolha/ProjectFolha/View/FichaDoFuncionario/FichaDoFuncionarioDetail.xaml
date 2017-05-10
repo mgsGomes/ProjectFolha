@@ -5,7 +5,8 @@
              xmlns:pages="clr-namespace:ProjectFolha.View.FichaDoFuncionario;assembly=ProjectFolha.View.FichaDoFuncionario"
              Title="Dados">
   
-  <ContentPage Title="Pessoais">
+    <!-- Dados Pessoais -->
+    <ContentPage Title="Pessoais">
         <ScrollView>
             <StackLayout Padding="20" 
                          Spacing="10" 
@@ -86,10 +87,230 @@
             </StackLayout>
         </ScrollView>
     </ContentPage>
-  <ContentPage Title="Documentos">
-    <StackLayout>
-      <Label Text="Blue" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5"  />
-      <BoxView Color="Blue" VerticalOptions="FillAndExpand" />
-    </StackLayout>
-  </ContentPage>
+    <!-- Documentação -->
+    <ContentPage Title="Documentos">
+        <ScrollView>
+            <StackLayout Padding="20" 
+                         Spacing="10" 
+                         BackgroundColor="White">
+
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Nome: " TextColor="Gray"/>
+                        <Label x:Name="lbl_NomeDoc" TextColor="Black" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="CPF: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Cpf" TextColor="Black" FontAttributes="Bold"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <!-- Identidade --> 
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Identidade" TextColor="Gray" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Código: " TextColor="Gray"/>
+                        <Label x:Name="lbl_CodigoIdentidade" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Data: " TextColor="Gray"/>
+                        <Label x:Name="lbl_DataIdentidade" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Orgão Emissor: " TextColor="Gray"/>
+                        <Label x:Name="lbl_OrgaoIdentidade" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="UF: " TextColor="Gray"/>
+                        <Label x:Name="lbl_UfIdentidade" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <!-- Carteira de Trabalho --> 
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Carteira de Trabalho" TextColor="Gray" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Código: " TextColor="Gray"/>
+                        <Label x:Name="lbl_CodigoCartTrab" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Data: " TextColor="Gray"/>
+                        <Label x:Name="lbl_DataCartTrab" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Série: " TextColor="Gray"/>
+                        <Label x:Name="lbl_SerieCartTrab" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="UF: " TextColor="Gray"/>
+                        <Label x:Name="lbl_UfCartTrab" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <!-- Título Eleitoral -->
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Título Eleitoral" TextColor="Gray" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Código: " TextColor="Gray"/>
+                        <Label x:Name="lbl_CodigoTitEleitoral" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Zona: " TextColor="Gray"/>
+                        <Label x:Name="lbl_ZonaTitEleitoral" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Seção: " TextColor="Gray"/>
+                        <Label x:Name="lbl_SecaoTitEleitoral" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <!-- Contrato -->
+    <ContentPage Title="Contrato">
+        <ScrollView>
+            <StackLayout Padding="20" 
+                         Spacing="10" 
+                         BackgroundColor="White">
+
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Nome: " TextColor="Gray"/>
+                        <Label x:Name="lbl_NomeContrato" TextColor="Black" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Unidade: " TextColor="Gray"/>
+                        <Label x:Name="lbl_ContratoUnidade" TextColor="Black" FontAttributes="Bold"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <!-- Contrato -->
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Contrato" TextColor="Gray" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Código: " TextColor="Gray"/>
+                        <Label x:Name="lbl_CodigoContrato" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Data de Admissão: " TextColor="Gray"/>
+                        <Label x:Name="lbl_DataAdmissao" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Tempo de Casa: " TextColor="Gray"/>
+                        <Label x:Name="lbl_TempoDeCasa" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Crachá: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Cracha" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Plano: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Plano" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Classe: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Classe" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Faixa: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Faixa" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Tempo de Faixa: " TextColor="Gray"/>
+                        <Label x:Name="lbl_TempoDeFaixa" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Salário Contratual: " TextColor="Gray"/>
+                        <Label x:Name="lbl_SalarioContratual" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Horas Contratuais: " TextColor="Gray"/>
+                        <Label x:Name="lbl_HorasContratuais" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <!--Sindicato-->
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Sind.: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Sindicato" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <!--Cargo-->
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Cargo" TextColor="Gray" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Descrição: " TextColor="Gray"/>
+                        <Label x:Name="lbl_DescricaoCargo" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="C.B.O.: " TextColor="Gray"/>
+                        <Label x:Name="lbl_CboCargo" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Tempo de Cargo: " TextColor="Gray"/>
+                        <Label x:Name="lbl_TempoDeCargo" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <!--Função-->
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Função" TextColor="Gray" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Descrição: " TextColor="Gray"/>
+                        <Label x:Name="lbl_DescricaoFuncao" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="C.B.O.: " TextColor="Gray"/>
+                        <Label x:Name="lbl_CboFuncao" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Tempo de Função: " TextColor="Gray"/>
+                        <Label x:Name="lbl_TempoDeFuncao" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <!--Setor-->
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Setor: " TextColor="Gray"/>
+                        <Label x:Name="lbl_Setor" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <!--Posto de Trabalho-->
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Posto de Trabalho: " TextColor="Gray"/>
+                        <Label x:Name="lbl_PostoDeTrabalho" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+                <!--Classificação Gerencial-->
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Classificação Gerencial: " TextColor="Gray"/>
+                        <Label x:Name="lbl_ClassGerencial" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="HorizontalRule"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
 </TabbedPage>

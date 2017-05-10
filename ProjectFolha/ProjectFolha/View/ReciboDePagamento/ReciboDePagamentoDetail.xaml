@@ -267,15 +267,15 @@
                        Margin="10"/>
             </StackLayout>
             
-            <StackLayout Padding="20"
-                         Spacing="10"
-                         HorizontalOptions="FillAndExpand"
+            <StackLayout HorizontalOptions="FillAndExpand"
                          BackgroundColor="#E0E0E0">
 
                 
-                <Label Text="Vencimentos:"
+                <Label Text="Vencimentos"
                        StyleClass="Subheader"
-                       TextColor="Black"/>
+                       TextColor="Black"
+                       Margin="10"
+                       HorizontalOptions="CenterAndExpand"/>
                 
                 <StackLayout>
                     <ListView x:Name="lvDetalheDoReciboVencomentos" 
@@ -341,15 +341,15 @@
                        Margin="10"/>
             </StackLayout>
 
-            <StackLayout Padding="20"
-                         Spacing="10"
-                         HorizontalOptions="FillAndExpand"
+            <StackLayout HorizontalOptions="FillAndExpand"
                          BackgroundColor="#E0E0E0">
 
 
-                <Label Text="Descontos:"
+                <Label Text="Descontos"
                        StyleClass="Subheader"
-                       TextColor="Black"/>
+                       TextColor="Black"
+                       Margin="10"
+                       HorizontalOptions="CenterAndExpand"/>
 
                 <StackLayout>
                     <ListView x:Name="lvDetalheDoReciboDescontos" 

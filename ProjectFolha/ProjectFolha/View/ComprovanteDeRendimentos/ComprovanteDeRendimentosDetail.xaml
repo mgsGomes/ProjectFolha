@@ -1,0 +1,1479 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectFolha.View.ComprovanteDeRendimentos.ComprovanteDeRendimentosDetail"
+             xmlns:pages="clr-namespace:ProjectFolha.View.ComprovanteDeRendimentos;assembly=ProjectFolha.View.ComprovanteDeRendimentos"
+             Title="Comprovante de Rendimentos">
+    <!--Comprovate-->
+    <ContentPage Title="Comprovante">
+        <ScrollView>
+            <StackLayout BackgroundColor="White">
+
+                <StackLayout BackgroundColor="#CCCCCC"
+                             Spacing="2"
+                             Orientation="Horizontal">
+                    <Label Text="Ano-Calendário 2016"                         
+                           HorizontalOptions="CenterAndExpand"
+                           StyleClass="Subheader"
+                           TextColor="#433C3C"
+                           Margin="10"/>
+                </StackLayout>
+
+                <!--1. Fonte Pagadora Pessoa Jurídica ou Pessoa Física-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="1. Fonte Pagadora Pessoa Jurídica ou Pessoa Física"
+                           VerticalOptions="Center"
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="CNPJ:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_Cnpj" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Nome empresarial:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_NomeEmpresarial" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+                
+                </StackLayout>
+                
+                <!--2. Pessoa Física Beneficiário dos Rendimentos-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="2. Pessoa Física Beneficiário dos Rendimentos"
+                           VerticalOptions="Center"
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="CPF" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_Cpf" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Nome Completo" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_Nome" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Código" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_UnidadeContrato" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                </StackLayout>
+
+                <!--3. Rendimentos Tributáveis, Deduções e Imposto sobre a Renda Retido na Fonte-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="3. Rendimentos Tributáveis, Deduções e Imposto sobre a Renda Retido na Fonte" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="290">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="1. Total dos rendimentos"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="90">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendTrib1"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="2. Contribuição previdenciária oficial"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendTrib2"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="3. Contribuições a entidades de previdência complementar, pública ou privada, e a fundos de apos. prog. indiv. (Fapi)"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/> 
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendTrib3"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="4. Pensão alimentícia"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendTrib4"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="5. Imposto sobre a renda retido na fonte"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/> 
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendTrib5"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                </StackLayout>
+
+                <!--4. Rendimentos Isentos e Não Tributáveis-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="4. Rendimentos Isentos e Não Tributáveis" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="290">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="1. Parcela isenta dos proventos de aposentadoria, reserva renumerada, reforma e pensão (65 anos ou mais)"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="90">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendIsento1"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="2. Diárias e ajuda de custo"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendIsento2"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="3. Pensão e proventos de aposentadoria ou reforma por moléstia grave; proventos de aposentadoria ou reforma por acidente em serviço"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendIsento3"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="4. Lucros e dividendos, apurados a partir de 1996, pagos por pessoa jurídica (lucro real, presumido ou arbitrado)"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendIsento4"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="5. Valores pagos ao titular ou sócio da microempresa ou empresa de pequeno porte, exceto pro labore, aluguéis ou serviços prestados"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendIsento5"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="6. Indenizações por rescisão de contrato de trabalho, inclusive a título de PDV, e por acidente de trabalho"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendIsento6"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="7. Outros"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendIsento7"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                </StackLayout>
+                
+                <!--5. Rendimentos Sujeitos à Tributação Exclusiva (rendimento líquido)-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="5. Rendimentos Sujeitos à Tributação Exclusiva (rendimento líquido)" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="290">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="1. 13º (décimo terceiro) salário"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="90">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendSujeitos1"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="2. Imposto sobre a renda retido na fonte sobre 13º (décimo terceiro) salário"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendSujeitos2"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="300">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="3. Outros: PLR"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendSujeitos3"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                </StackLayout>
+                
+                <!--6. Rendimentos Recebidos Acumuladamente - Art. 12-A da Lei nº7.713, de 1988 (sujeitos à tributação exclusiva)-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="6. Rendimentos Recebidos Acumuladamente - Art. 12-A da Lei nº7.713, de 1988 (sujeitos à tributação exclusiva)"
+                           VerticalOptions="Center"
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="6.1 Número do processo:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_NumeroProcesso" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Quantidade de meses:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_QuantMeses" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Natureza do rendimento:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_NatRendimento" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="290">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="1. Total dos rendimentos tributáveis (inclusive férias e décimo terceiro salário)"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="90">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendRecebidos1"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="290">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="2. Exclusão: Despesas com ação judicial"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="90">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendRecebidos2"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="290">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="3. Dedução: Contribuição previdenciária oficial"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="90">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendRecebidos3"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="290">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="4. Dedução: Pensão alimentícia"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="90">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendRecebidos4"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="290">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="5. Imposto sobre a renda retido na fonte"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="90">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendRecebidos5"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="290">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="6. Rendimentos isentos de pensão, proventos de aposentadoria ou reforma por moléstia grave ou aposentadoria ou reforma por acidente em serviço"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="90">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_RendRecebidos6"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                </StackLayout>
+                
+                <!--7. Informações Complementares-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="7. Informações Complementares" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="290">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_InfoComplementarDesc"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="90">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_InfoComplementarValor"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>                    
+
+                </StackLayout>
+                
+                <!--8. Responsável pelas Informações-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="8. Responsável pelas Informações"
+                           VerticalOptions="Center"
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Nome:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_NomeResponsavel" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Data:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_DataResponsavel" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <Label Text="Aprovado pela Instrução Normativa RFB nº 1.682, de 28 de dezembro de 2016."
+                           VerticalOptions="Center"
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    
+    <!--Anexo-->
+    <ContentPage Title="Anexo">
+        <ScrollView>
+            <StackLayout BackgroundColor="White">
+
+                <StackLayout BackgroundColor="#CCCCCC"
+                             Spacing="2"
+                             Orientation="Horizontal">
+                    <Label Text="Ano-Calendário 2016"                         
+                           HorizontalOptions="CenterAndExpand"
+                           StyleClass="Subheader"
+                           TextColor="#433C3C"
+                           Margin="10"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="Anexo ao Comprovante de Rendimentos Pagos e de Imposto sobre a Renda Retido na Fonte"
+                           VerticalOptions="Center"
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Fonte Pagadora:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_NomeFonte" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="CNPJ:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_CnpjFonte" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Beneficiário:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_NomeBeneficiaria" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Código:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_UnidadeContratoAnexo" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>                        
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="CPF:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_CpfAnexo" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout WidthRequest="200">
+                                <Label Text="Nat.Rendimento:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Label x:Name="lbl_NatRendimentoAnexo" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+                    
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                </StackLayout>
+
+                <!--Rendimentos Tributáveis, Deduções e Imposto sobre a Renda Retido na Fonte-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="Rendimentos Tributáveis, Deduções e Imposto sobre a Renda Retido na Fonte" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <!--Cabeçalho-->
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="75">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="Mês"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="120">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label Text="Rendimentos"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Gray"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="140">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label Text="Contrib. Previd."
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Gray"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="45">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label Text="IRRF"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Gray"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <!--Dados-->
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes1"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento1"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev1"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf1"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes2"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento2"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev2"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf2"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes3"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento3"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev3"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf3"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes4"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento4"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev4"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf4"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes5"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento5"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev5"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf5"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes6"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento6"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev6"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf6"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes7"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento7"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev7"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf7"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes8"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento8"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev8"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf8"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes9"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento9"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev9"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf9"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes10"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento10"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev10"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf10"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes11"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento11"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev11"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf11"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_Mes12"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Rendimento12"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_ContribPrev12"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="55">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_Irrf12"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout  BackgroundColor="#CCCCCC" Orientation="Horizontal">
+                        <StackLayout WidthRequest="100">
+                            <Label Text="Total:"                         
+                                   HorizontalOptions="StartAndExpand"                               
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="95">
+                            <Label x:Name="lbl_TotRendimentos"                         
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="122">
+                            <Label x:Name="lbl_TotContribuicao"                          
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="63">
+                            <Label x:Name="lbl_TotIrrf"                          
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                </StackLayout>                   
+
+                <!--Rendimentos Sujeitos à Tributação Exclusiva-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="Rendimentos Sujeitos à Tributação Exclusiva" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <!--Cabeçalho-->
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="80">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label Text="Mês"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="130">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label Text="13º Salário"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Gray"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label Text="Lucros Distribuídos"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Gray"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    
+                    <!--Dados-->
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj1"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario1"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist1"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj2"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario2"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist2"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj3"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario3"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist3"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj4"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario4"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist4"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj5"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario5"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist5"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj6"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario6"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist6"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj7"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario7"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist7"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj8"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario8"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist8"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj9"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario9"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist9"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj10"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario10"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist10"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj11"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario11"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist11"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <!--<BoxView Color="Blue"/>-->
+                            <Label x:Name="lbl_MesSuj12"
+                                   TextColor="Gray"
+                                   Margin="3"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_DecimoSalario12"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <!--<BoxView Color="Green"/>-->
+                            <Label x:Name="lbl_LucroDist12"
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout  BackgroundColor="#CCCCCC" Orientation="Horizontal">
+                        <StackLayout WidthRequest="93">
+                            <Label Text="Total:"                         
+                                   HorizontalOptions="StartAndExpand"                               
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="117">
+                            <Label x:Name="lbl_TotDecimo13"                         
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                        <StackLayout WidthRequest="170">
+                            <Label x:Name="lbl_TotLucroDistribuido"                          
+                                   HorizontalOptions="EndAndExpand"
+                                   TextColor="Black"
+                                   Margin="3"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+                    
+                </StackLayout>
+
+                <!--Responsável pelas Informações-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20">
+                    <Label Text="Responsável pelas Informações"
+                           VerticalOptions="Center"
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="Gray"
+                           FontAttributes="Bold"/>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Nome:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_NomeResponsavelAnexo" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Data:" TextColor="Gray" Margin="3" HorizontalOptions="Center"/>
+                            <Label x:Name="lbl_DataResponsavelAnexo" TextColor="Black" Margin="3" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <BoxView StyleClass="HorizontalRule"/>
+
+                </StackLayout>
+
+            </StackLayout>            
+        </ScrollView>
+    </ContentPage>
+</TabbedPage>

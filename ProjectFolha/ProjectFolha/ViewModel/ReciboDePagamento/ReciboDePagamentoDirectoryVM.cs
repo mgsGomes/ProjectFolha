@@ -45,7 +45,7 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
             {
                 IsBusy = true;
 
-                var ReciboCarregado = GeraDadosAleatorioTeste.CarregaReciboTeste();
+                var ReciboCarregado = ServicoReciboDePagamento.CarregaRecibo();
 
                 foreach(var recibo in ReciboCarregado.ReciboDePagamentoEntities)
                 {
@@ -64,7 +64,7 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
             {
                 IsBusy = true;
 
-                var ReciboCarregado = GeraDadosAleatorioTeste.CarregaReciboTeste();
+                var ReciboCarregado = ServicoReciboDePagamento.CarregaRecibo();
 
                 foreach (var recibo in ReciboCarregado.ReciboDePagamentoEntities)
                 {
@@ -81,7 +81,7 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
             {
                 IsBusy = true;
 
-                var ReciboCarregado = GeraDadosAleatorioTeste.CarregaReciboPorContrato(unidade, contrato);
+                var ReciboCarregado = ServicoReciboDePagamento.CarregaReciboPorContrato(unidade, contrato);
 
                 foreach(var recibo in ReciboCarregado.ReciboDePagamentoEntities)
                 {
@@ -96,7 +96,7 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
         {
             Dictionary<String, String> unidadeContrato = new Dictionary<string, string>();
 
-            var ListaDeContratos = GeraDadosAleatorioTeste.CarregaListaDeContratosPessoa();
+            var ListaDeContratos = ServicoReciboDePagamento.CarregaListaDeContratosPessoa();
 
             foreach(var listaDeContratosPessoa in ListaDeContratos.ReciboDePagamentoListaDeContratos)
             {

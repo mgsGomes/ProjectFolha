@@ -44,8 +44,16 @@
     <Compile Include="B.xaml.cs">
       <DependentUpon>B.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\ComprovanteDeRendimentos\ComprovanteDeRendimentosAnexoEntities.cs" />
+    <Compile Include="Model\ComprovanteDeRendimentos\ComprovanteDeRendimentosEntities.cs" />
+    <Compile Include="Model\ComprovanteDeRendimentos\ComprovanteDeRendimentosList.cs" />
+    <Compile Include="Model\ComprovanteDeRendimentos\ComprovanteDeRendimentosListaDeContratos.cs" />
+    <Compile Include="Model\ComprovanteDeRendimentos\RendimentosSujeitosTributacao.cs" />
+    <Compile Include="Model\ComprovanteDeRendimentos\RendimentosTributaveis.cs" />
+    <Compile Include="Model\ComprovanteDeRendimentos\Services\ServicoComprovanteRendimentos.cs" />
     <Compile Include="Model\Entities\Repository.cs" />
     <Compile Include="Model\Entities\RHEstadoCivil.cs" />
+    <Compile Include="Model\FichaDoFuncionario\FichaDoFuncionarioContratoEntities.cs" />
     <Compile Include="Model\FichaDoFuncionario\FichaDoFuncionarioEntities.cs" />
     <Compile Include="Model\FichaDoFuncionario\FichaDoFuncionarioList.cs" />
     <Compile Include="Model\FichaDoFuncionario\FichaDoFuncionarioListaDeContratos.cs" />
@@ -57,11 +65,18 @@
     <Compile Include="Model\ReciboDePagamento\ReciboDePagamentoList.cs" />
     <Compile Include="Model\ReciboDePagamento\ReciboDePagamentoListaDeContratos.cs" />
     <Compile Include="Model\ReciboDePagamento\ReciboDePagamentoVenctoEntities.cs" />
-    <Compile Include="Model\ReciboDePagamento\Services\GeraDadosAleatorioTeste.cs" />
+    <Compile Include="Model\ReciboDePagamento\Services\ServicoReciboDePagamento.cs" />
     <Compile Include="Services\AzureServices.cs" />
+    <Compile Include="ViewModel\ComprovanteDeRendimentos\ComprovanteDeRendimentosDirectoryVM.cs" />
     <Compile Include="ViewModel\FichaDoFuncionario\FichaDoFuncionarioDirectoryVM.cs" />
     <Compile Include="ViewModel\ReciboDePagamento\ReciboDePagamentoDirectoryVM.cs" />
     <Compile Include="ViewModel\VMTeste.cs" />
+    <Compile Include="View\ComprovanteDeRendimentos\ComprovanteDeRendimentosDetail.xaml.cs">
+      <DependentUpon>ComprovanteDeRendimentosDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ComprovanteDeRendimentos\ComprovanteDeRendimentosListContrato.xaml.cs">
+      <DependentUpon>ComprovanteDeRendimentosListContrato.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FichaDoFuncionario\FichaDoFuncionarioDetail.xaml.cs">
       <DependentUpon>FichaDoFuncionarioDetail.xaml</DependentUpon>
     </Compile>
@@ -193,6 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Model\Diagrama de Classe.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -220,7 +236,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\ComprovanteDeRendimentos\" />
+    <EmbeddedResource Include="View\ComprovanteDeRendimentos\ComprovanteDeRendimentosDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\Login\Login.xaml">
@@ -260,6 +279,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\FichaDoFuncionario\FichaDoFuncionarioDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\ComprovanteDeRendimentos\ComprovanteDeRendimentosListContrato.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

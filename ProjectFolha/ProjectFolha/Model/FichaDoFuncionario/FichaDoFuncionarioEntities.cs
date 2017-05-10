@@ -1,6 +1,7 @@
 ﻿using ProjectFolha.Model.Entities;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -244,7 +245,7 @@ namespace ProjectFolha.Model.FichaDoFuncionario
         public string ZonaEleitoral
         {
             get { return zonaEleitoral; }
-            set { tituloEleitoral = value; OnPropertyChange(); }
+            set { zonaEleitoral = value; OnPropertyChange(); }
         }
 
         private string secaoEleitoral;
@@ -261,5 +262,11 @@ namespace ProjectFolha.Model.FichaDoFuncionario
             set { unidadeDesc = value; OnPropertyChange(); }
         }
 
+        private ObservableCollection<FichaDoFuncionarioContratoEntities> dadosDoContrato = new ObservableCollection<FichaDoFuncionarioContratoEntities>();
+        public ObservableCollection<FichaDoFuncionarioContratoEntities> DadosDoContrato
+        {
+            get { return dadosDoContrato; }
+            set { dadosDoContrato = value; OnPropertyChange(); }
+        }
     }
 }

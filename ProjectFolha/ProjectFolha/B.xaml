@@ -3,28 +3,112 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectFolha.B"
              xmlns:VM="clr-namespace:ProjectFolha.ViewModel"
-             Title="Página B">
-    <ContentPage.BindingContext>
-        <VM:VMTeste/>
-    </ContentPage.BindingContext>
-    <StackLayout>
-        <Label Text="Página B" VerticalOptions="Center" HorizontalOptions="Center"/>
-
-        <Button Text="Sincronizar" 
-                Command="{Binding GetRHEstadoCivilCommand}"/>
+             Title="Comprovante de Rendimentos">
+    
+    <StackLayout Orientation="Vertical"
+                 Padding="20">
+        <Label Text="3. Rendimentos Tributáveis, Deduções e Imposto sobre a Renda Retido na Fonte" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"
+               TextColor="Gray"
+               FontAttributes="Bold"/>
         
-        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
+        <BoxView StyleClass="HorizontalRule"/>
+        
+        <StackLayout Orientation="Horizontal">
+            <StackLayout WidthRequest="290">
+                <!--<BoxView Color="Blue"/>-->
+                <Label Text="1. Total dos Rendimentos"
+                       TextColor="Gray"
+                       Margin="3"
+                       HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            <StackLayout WidthRequest="90">
+                <!--<BoxView Color="Green"/>-->
+                <Label Text="29.910,06"
+                       HorizontalOptions="EndAndExpand"
+                       TextColor="Black"
+                       Margin="3"/>
+            </StackLayout>
+        </StackLayout>
 
-        <!--<ListView x:Name="ListaTeste"
-                  ItemsSource="{Binding RhEstadoCivil}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ImageCell Text="{Binding EstadoCivil}"
-                               Detail="{Binding Descricao20}"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>-->
+        <BoxView StyleClass="HorizontalRule"/>
 
+        <StackLayout Orientation="Horizontal">
+            <StackLayout WidthRequest="300">
+                <!--<BoxView Color="Blue"/>-->
+                <Label Text="2. Contribuição previdenciária oficial"
+                       TextColor="Gray"
+                       Margin="3"
+                       HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            <StackLayout WidthRequest="80">
+                <!--<BoxView Color="Green"/>-->
+                <Label Text="2.948,58"
+                       HorizontalOptions="EndAndExpand"
+                       TextColor="Black"
+                       Margin="3"/>
+            </StackLayout>
+        </StackLayout>
+        
+        <BoxView StyleClass="HorizontalRule"/>
+        
+        <StackLayout Orientation="Horizontal">
+            <StackLayout WidthRequest="300">
+                <!--<BoxView Color="Blue"/>-->
+                <Label Text="3. Contribuições a entidades de previdência complementar, pública ou privada, e a fundos de apos. prog. indiv. (Fapi)"
+                       TextColor="Gray"
+                       Margin="3"
+                       HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            <StackLayout WidthRequest="80">
+                <!--<BoxView Color="Green"/>-->
+                <Label Text="0,00"
+                       HorizontalOptions="EndAndExpand"
+                       TextColor="Black"
+                       Margin="3"/>
+            </StackLayout>
+        </StackLayout>
 
+        <BoxView StyleClass="HorizontalRule"/>
+        
+        <StackLayout Orientation="Horizontal">
+            <StackLayout WidthRequest="300">
+                <!--<BoxView Color="Blue"/>-->
+                <Label Text="4. Pensão alimentpicia"
+                       TextColor="Gray"
+                       Margin="3"
+                       HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            <StackLayout WidthRequest="80">
+                <!--<BoxView Color="Green"/>-->
+                <Label Text="0,00"
+                       HorizontalOptions="EndAndExpand"
+                       TextColor="Black"
+                       Margin="3"/>
+            </StackLayout>
+        </StackLayout>
+
+        <BoxView StyleClass="HorizontalRule"/>
+
+        <StackLayout Orientation="Horizontal">
+            <StackLayout WidthRequest="300">
+                <!--<BoxView Color="Blue"/>-->
+                <Label Text="5. Imposto sobre a renda retido na fonte"
+                       TextColor="Gray"
+                       Margin="3"
+                       HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            <StackLayout WidthRequest="80">
+                <!--<BoxView Color="Green"/>-->
+                <Label Text="228,17"
+                       HorizontalOptions="EndAndExpand"
+                       TextColor="Black"
+                       Margin="3"/>
+            </StackLayout>
+        </StackLayout>
+
+        <BoxView StyleClass="HorizontalRule"/>
+        
     </StackLayout>
 </ContentPage>

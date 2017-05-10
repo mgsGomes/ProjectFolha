@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectFolha.View.FichaDoFuncionario.FichaDoFuncionarioLista"
-             Title="Ficha do Funcionário">
+             x:Class="ProjectFolha.View.ComprovanteDeRendimentos.ComprovanteDeRendimentosListContrato"
+             Title="Comprovante de Rendimentos">
     <StackLayout Padding="20" 
                  Spacing="10"
                  BackgroundColor="#E0E0E0">
 
         <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
-        
+
         <Label Text="Unidade/Contrato:" 
                    StyleClass="Subheader" 
                    TextColor="Black"/>
@@ -18,7 +18,7 @@
                   BackgroundColor="White"
                   SeparatorVisibility="Default"
                   SeparatorColor="Black"
-                  ItemsSource="{Binding FichaListaDeContratos, Mode=TwoWay}">
+                  ItemsSource="{Binding ComprovanteListaDeContratos, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

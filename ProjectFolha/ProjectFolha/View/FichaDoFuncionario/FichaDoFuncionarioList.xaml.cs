@@ -35,9 +35,7 @@ namespace ProjectFolha.View.FichaDoFuncionario
                 return;
 
             
-            fichaDoFuncionario.CarregaFichaPorContrato(selectedFicha.Unidade, selectedFicha.Contrato);
-            
-           // fichaDoFuncionario.FichasDoFuncionario
+            fichaDoFuncionario.CarregaFichaPorContrato(selectedFicha.Unidade, selectedFicha.Contrato);           
 
             Navigation.PushAsync(new FichaDoFuncionarioDetail(fichaDoFuncionario));
             lvLista.SelectedItem = null;

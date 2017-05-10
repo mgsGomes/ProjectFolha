@@ -16,6 +16,7 @@ namespace ProjectFolha.Model.FichaDoFuncionario.Services
 
             string[] names = { "Micael Gomes de Souza", "Micael Gomes de Souza" };
             string[] unidades = { "0001", "0002" };
+            string[] unidadesDesc = { "Unidade Modelo de Testes", "Unidade Do Segundo Contrato" };
             int[] contratos = { 1022, 1023 };
 
             for (var i = 0; i < 2; i++)
@@ -24,7 +25,7 @@ namespace ProjectFolha.Model.FichaDoFuncionario.Services
 
                 dadosDoFuncionario.Empresa = "Empresa de Testes";
                 dadosDoFuncionario.Unidade = unidades[i];
-                dadosDoFuncionario.UnidadeDesc = unidades[i] + " - " + "Unidade Modelo de Testes";
+                dadosDoFuncionario.UnidadeDesc = unidades[i] + " - " + unidadesDesc[i];
                 dadosDoFuncionario.Contrato = contratos[i];
                 dadosDoFuncionario.Pessoa = "11111";
                 dadosDoFuncionario.Nome = names[i];
@@ -58,6 +59,52 @@ namespace ProjectFolha.Model.FichaDoFuncionario.Services
                 dadosDoFuncionario.SecaoEleitoral = "0144";
                 dadosDoFuncionario.EnderecoDesc = dadosDoFuncionario.Cidade + "/" + dadosDoFuncionario.Uf;
                 dadosDoFuncionario.LocalNascimentoDesc = dadosDoFuncionario.LocalNascimento + "/" + dadosDoFuncionario.UfNascimento;
+
+                FichaDoFuncionarioContratoEntities dadosDoContrato = new FichaDoFuncionarioContratoEntities();
+                dadosDoContrato.Unidade = unidades[i];
+                dadosDoContrato.Contrato = contratos[i];
+                dadosDoContrato.UnidadeDesc = unidades[i] + "/" + unidadesDesc[i];
+                if (i == 0)
+                {
+                    dadosDoContrato.DataAdmissao = new DateTime(2015, 7, 10);
+                    dadosDoContrato.TempoDeCasa = "1 Ano e 9 Meses";
+                    dadosDoContrato.Cracha = "12345642";
+                    dadosDoContrato.Plano = "1000";
+                    dadosDoContrato.Classe = "0001";
+                    dadosDoContrato.Faixa = "A";
+                    dadosDoContrato.TempoDeFaixa = "0 Ano e 9 Meses";
+                    dadosDoContrato.SalarioContratual = 2456;
+                    dadosDoContrato.Cargo = "Programador Júnior";
+                    dadosDoContrato.CboCargo = "317110";
+                    dadosDoContrato.TempoDeCargo = "0 Ano e 9 Meses";
+                    dadosDoContrato.Funcao = "Programador .NET";
+                    dadosDoContrato.Cbofuncao = "317110";
+                    dadosDoContrato.TempoDefuncao = "0 Ano e 9 Meses";                                   
+                }
+                else
+                {
+                    dadosDoContrato.DataAdmissao = new DateTime(2017, 1, 20);
+                    dadosDoContrato.TempoDeCasa = "0 Ano e 3 Meses";
+                    dadosDoContrato.Cracha = "98673654";
+                    dadosDoContrato.Plano = "3000";
+                    dadosDoContrato.Classe = "0080";
+                    dadosDoContrato.Faixa = "G";
+                    dadosDoContrato.TempoDeFaixa = "0 Ano e 3 Meses";
+                    dadosDoContrato.SalarioContratual = 2456;
+                    dadosDoContrato.Cargo = "Analista de Negócio";
+                    dadosDoContrato.CboCargo = "387767";
+                    dadosDoContrato.TempoDeCargo = "0 Ano e 3 Meses";
+                    dadosDoContrato.Funcao = "Analise do Negócio";
+                    dadosDoContrato.Cbofuncao = "387767";
+                    dadosDoContrato.TempoDefuncao = "0 Ano e 3 Meses";
+                };
+                dadosDoContrato.HorasContratuais = "220";
+                dadosDoContrato.Sindicato = "Sindicato dos Trab. em Processamento de Dados do RS.";
+                dadosDoContrato.Setor = "Desenvolvimento";
+                dadosDoContrato.PostoDeTrabalho = "P&D";
+                dadosDoContrato.ClassGerencial = "Gerência de P&D";
+
+                dadosDoFuncionario.DadosDoContrato.Add(dadosDoContrato);
 
                 fichaDoFuncionario.Add(dadosDoFuncionario);
             }

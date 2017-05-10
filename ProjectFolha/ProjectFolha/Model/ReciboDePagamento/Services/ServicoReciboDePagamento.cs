@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ProjectFolha.Model.Services.ReciboDePagamento
 {
-    public class GeraDadosAleatorioTeste
+    public class ServicoReciboDePagamento
     {
-        public static ReciboDePagamentoList CarregaReciboTeste()
+        public static ReciboDePagamentoList CarregaRecibo()
         {
 
 
@@ -158,7 +158,7 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
             ReciboDePagamentoList reciboDePagamentoList = new ReciboDePagamentoList();
             ReciboDePagamentoList reciboDePagamentoPorContrato = new ReciboDePagamentoList();
 
-            reciboDePagamentoList = CarregaReciboTeste();
+            reciboDePagamentoList = CarregaRecibo();
 
             for(int i = 0;  i < reciboDePagamentoList.ReciboDePagamentoEntities.Count; i++)
             {
