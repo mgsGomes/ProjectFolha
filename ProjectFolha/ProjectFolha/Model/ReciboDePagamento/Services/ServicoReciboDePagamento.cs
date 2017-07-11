@@ -165,7 +165,9 @@ namespace ProjectFolha.Model.Services.ReciboDePagamento
                 if ((reciboDePagamentoList.ReciboDePagamentoEntities[i].Unidade == unidade) &&  
                     (reciboDePagamentoList.ReciboDePagamentoEntities[i].Contrato == contrato))
                 {
-                    reciboDePagamentoPorContrato.ReciboDePagamentoEntities.Add(reciboDePagamentoList.ReciboDePagamentoEntities[i]);
+                    reciboDePagamentoPorContrato.ReciboDePagamentoEntities.Add(
+                        reciboDePagamentoList.ReciboDePagamentoEntities[i]
+                    );
                 }     
             }
             return reciboDePagamentoPorContrato;            

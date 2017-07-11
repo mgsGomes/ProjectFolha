@@ -2,6 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectFolha.Detail"
-             Title="Detail"
+             Title="Home"
              >
+
+    <StackLayout Orientation="Vertical"
+                 Padding="20">
+        <Label Text="Feliz aniversário!!!"
+               VerticalOptions="Center"
+               HorizontalOptions="StartAndExpand"
+               TextColor="Gray"
+               FontAttributes="Bold"/>
+
+        <BoxView StyleClass="HorizontalRule"/>
+
+        <Label Text="Recibo do mês de abril liberado para consulta"
+               VerticalOptions="Center"
+               HorizontalOptions="StartAndExpand"
+               TextColor="Gray"
+               FontAttributes="Bold"/>
+
+        <BoxView StyleClass="HorizontalRule"/>
+    </StackLayout>
 </ContentPage>

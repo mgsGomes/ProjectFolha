@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ProjectFolha.Model.Entities.ObservableBaseObject" Collapsed="true">
-    <Position X="10.5" Y="0.5" Width="2" />
+    <Position X="5" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\ObservableBaseObject.cs</FileName>
@@ -9,49 +9,49 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ProjectFolha.Model.Entities.ReciboDePagamento.ReciboDePagamentoBaseEntities" Collapsed="true">
-    <Position X="8" Y="2.75" Width="2.5" />
+    <Position X="7.5" Y="3.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AQAAAQAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAEAAAE=</HashCode>
       <FileName>Model\ReciboDePagamento\ReciboDePagamentoBaseEntities.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectFolha.Model.Entities.ReciboDePagamento.ReciboDePagamentoDescEntities" Collapsed="true">
-    <Position X="5" Y="2.75" Width="2.5" />
+    <Position X="7.5" Y="2" Width="2.5" />
     <TypeIdentifier>
       <HashCode>ACAAAQAABAAAABQAAAAQAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>Model\ReciboDePagamento\ReciboDePagamentoDescEntities.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectFolha.Model.Entities.ReciboDePagamento.ReciboDePagamentoEntities" Collapsed="true">
-    <Position X="2.5" Y="1.5" Width="2.25" />
+    <Position X="1.75" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>BJAAAAQQBAAEAAUgBCAA4IQgAMCAIAkQAAQAEACEAAA=</HashCode>
       <FileName>Model\ReciboDePagamento\ReciboDePagamentoEntities.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectFolha.Model.Entities.ReciboDePagamento.ReciboDePagamentoList" Collapsed="true">
-    <Position X="8" Y="1.5" Width="2.25" />
+    <Position X="1.75" Y="3.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAABAAAAAQAAQAAAA=</HashCode>
       <FileName>Model\ReciboDePagamento\ReciboDePagamentoList.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectFolha.Model.Entities.ReciboDePagamento.ReciboDePagamentoListaDeContratos" Collapsed="true">
-    <Position X="12" Y="1.5" Width="2.75" />
+    <Position X="7.5" Y="0.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAgAIIAIAACAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\ReciboDePagamento\ReciboDePagamentoListaDeContratos.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectFolha.Model.Entities.ReciboDePagamento.ReciboDePagamentoVenctoEntities" Collapsed="true">
-    <Position X="5" Y="1.5" Width="2.75" />
+    <Position X="1.75" Y="2" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AQAAAQAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAEAAAE=</HashCode>
       <FileName>Model\ReciboDePagamento\ReciboDePagamentoVenctoEntities.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectFolha.Model.Services.ReciboDePagamento.ServicoReciboDePagamento" Collapsed="true">
-    <Position X="12" Y="2.75" Width="2.75" />
+    <Position X="4.5" Y="3.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAgAAAAAAAAAACAAAA=</HashCode>
       <FileName>Model\ReciboDePagamento\Services\ServicoReciboDePagamento.cs</FileName>

@@ -16,9 +16,23 @@ namespace ProjectFolha.View.Login
         {
             InitializeComponent();
 
+            string lIdentificadorEmpresa = "9999";
+            string lUserName = "Master";
+            string lSenha = "123";
+
             Btn_Logar.Clicked += (sender, e) =>
             {
-               Application.Current.MainPage = new MainPage();
+                if((Edt_IdentificadorEmpresa.Text == lIdentificadorEmpresa) &&
+                   (Edt_UserName.Text == lUserName) &&
+                   (Edt_Senha.Text == lSenha))
+                {
+                    Application.Current.MainPage = new MainPage();
+                }
+                else
+                {
+                    DisplayAlert("Aviso", "Usuário não cadastrado.", "Ok");
+                }
+               
             };
 
         }

@@ -20,13 +20,16 @@
                TextColor="Black"
                StyleClass="Header"/>
 
-        <Entry Placeholder="Identificador da empresa"
+        <Entry x:Name="Edt_IdentificadorEmpresa"
+               Placeholder="Identificador da empresa"
                Text="{Binding IdentificadorEmpresa}"
                TextColor="Black"/>
-        <Entry Placeholder="Username"
+        <Entry x:Name="Edt_UserName"
+               Placeholder="Username"
                Text="{Binding Username}"
                TextColor="Black"/>
-        <Entry Placeholder="Password"
+        <Entry x:Name="Edt_Senha"
+               Placeholder="Password"
                Text="{Binding Password}"
                TextColor="Black"
                IsPassword="True"/>

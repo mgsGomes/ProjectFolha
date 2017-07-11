@@ -28,10 +28,10 @@ namespace ProjectFolha
 
 
 
-            Button1.Clicked += async (sender, e) =>
-            {
-                await App.NavigateMasterDetail(new B());
-            };
+            //Button1.Clicked += async (sender, e) =>
+            //{
+            //    await App.NavigateMasterDetail(new B());
+            //};
         }
     }
 }

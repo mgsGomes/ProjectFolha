@@ -100,7 +100,10 @@ namespace ProjectFolha.ViewModel.ReciboDePagamento
 
             foreach(var listaDeContratosPessoa in ListaDeContratos.ReciboDePagamentoListaDeContratos)
             {
-                unidadeContrato.Add(listaDeContratosPessoa.UnidadeContrato, listaDeContratosPessoa.UnidadeContrato);
+                unidadeContrato.Add(
+                    listaDeContratosPessoa.UnidadeContrato, 
+                    listaDeContratosPessoa.UnidadeContrato
+                );
             }
 
             return unidadeContrato;
